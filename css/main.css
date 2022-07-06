@@ -209,6 +209,11 @@ h3 {
   padding: .75rem 3rem;
 }
 
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
 .btn-icon {
   display: inline-flex;
   align-items: center;
@@ -343,6 +348,11 @@ h3 {
   display: none;
 }
 
+.text-help {
+  color: var(--danger);
+  display: none;
+}
+
 /* LOGIN */
 /* Navbar ----------------------- */
 
@@ -413,9 +423,12 @@ video {
 }
 
 .form-login {
-  background-color: var(--info-light);
+  /* background-color: var(--info-light); */
   width: 300px;
+}
 
+.form-login h1 {
+  margin-bottom: 1.5rem;
 }
 
 .form-group {
