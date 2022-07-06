@@ -344,8 +344,30 @@ h3 {
 }
 
 /* LOGIN */
+/* Navbar ----------------------- */
+
+.navbar {
+  background-color: var(--white);
+  padding: 11px 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-brand {
+  /* background-color: pink; */
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-brand img {
+  height: 2rem;
+}
+
+/* Fin Navbar */
+
+/* Wrap img login */
 .wrap-img-login {
-  background-color: var(--success);
+  /* background-color: var(--success); */
   min-height: calc(100vh - 64px);
   display: flex;
   justify-content: center;
@@ -378,4 +400,5 @@ video {
   object-fit: cover;
   object-position: center;
 }
+/* Wrap img login */
 /* END LOGIN */
