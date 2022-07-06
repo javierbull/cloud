@@ -38,7 +38,8 @@ html {
 body {
   color: var(--dark);
   font-family: 'Poppins', sans-serif;
-  line-height: 1.5rem;
+  line-height: normal;
+  font-weight: 400;
 }
 
 main {
@@ -46,23 +47,52 @@ main {
 }
 
 hr {
-  background-color: var(--a-01);
+  background-color: var(--dark);
 }
 
 h1 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 400;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 h2 {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
-small {
-  font-size: 0.75rem;
-  line-height: 1rem;
+h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.body-bold {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.body-semibold {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.body-medium {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.small-bold {
+  font-size: .75rem;
+  font-weight: 700;
+}
+
+.small-semibold {
+  font-size: .75rem;
+  font-weight: 600;
+}
+
+.small-regular {
+  font-size: .75rem;
+  font-weight: 400;
 }
 
 .container-fluid {
