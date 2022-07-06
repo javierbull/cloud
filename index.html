@@ -1,0 +1,2146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Admin</title>
+	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+	<link rel="icon" href="img/icons/favicon.png" type="image/x-icon" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+	<script src="js/plugin/webfont/webfont.min.js"></script>
+	<link href="css/fonts.min.css" rel="stylesheet" type="text/css">
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/mq.css">
+
+</head>
+
+<body>
+	<header>
+		<nav class="navbar navbar-light navbar-cear navbar-fixed">
+			<div class="container-fluid container-mobile ">
+				<div class="navbar-cear-menu">
+					<button type="button" name="button" class="btn btn-circle btn-icon" id="toggle-btn-sidebar">
+						<span class="material-icons-outlined">
+							menu
+						</span>
+					</button>
+					<a class="navbar-brand" href="#">
+						<img src="img/logos/logo-cear-negativo.png" alt="">
+					</a>
+				</div>
+				<div class="btn-group">
+					<button type="button" class="btn dropdown-toggle btn-user" data-bs-toggle="dropdown" aria-expanded="false">
+						<span class="user-name">
+							Nombre Usuario
+						</span>
+						<span class="material-icons">
+							account_circle
+						</span>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-end">
+						<li><button class="dropdown-item" type="button">Cerrar sesión</button></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<main class="bg-light">
+		<!-- Sidebar -->
+		<div class="sidebar-admin" id="sidebar-admin">
+			<ul class="sidebar-admin-list">
+				<li class="item-sidebar">
+					<button class="btn btn-toggle collapsed showProfesionales active-item-sidebar active">
+						Profesionales
+					</button>
+				</li>
+				<li class="item-sidebar">
+					<button class="btn btn-toggle collapsed btn-icon-sidebar" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+						Datos
+						<span class="material-icons-outlined">
+							expand_more
+						</span>
+					</button>
+					<div class="collapse show-" id="home-collapse">
+						<ul class="btn-toggle-nav sidebar-list-collapse">
+							<li><a href="#" class="item-collapse rounded showDesignacion">Tipos de designación</a></li>
+							<li><a href="#" class="item-collapse rounded showEspecialidad">Especialidades</a></li>
+							<li><a href="#" class="item-collapse rounded showProfesiones">Profesiones</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="item-sidebar">
+					<button class="btn btn-toggle collapsed showCasos">
+						Casos
+					</button>
+				</li>
+				<li class="item-sidebar">
+					<button class="btn btn-toggle collapsed showUsuarios">
+						Usuarios
+					</button>
+				</li>
+			</ul>
+		</div>
+
+		<!-- end sidebar -->
+		<!-- main panel -->
+		<div class="admin-panel ml-panel" id="admin-panel">
+
+			<div class="panel active-panel" id="profesionales-panel">
+				<div class="row">
+					<div class="header-panel">
+						<small class="title-panel">
+							Profesionales
+						</small>
+						<h2>
+							Listado de profesionales
+						</h2>
+					</div>
+
+					<div class="wrap-controls-admin marginBottom-2">
+						<div class="content-controls marginBottom-1">
+							<div class="col-xl-3">
+								<div class="search-input">
+									<input type="text" class="form-control" placeholder="Buscar profesional" aria-label="Recipient's username" aria-describedby="button-addon2">
+									<button class="btn material-icons-outlined" type="button">
+										search
+									</button>
+								</div>
+								<small class="text-help">
+									<span class="material-icons">
+										report_problem
+									</span>
+									El usuario es incorrecto
+								</small>
+							</div>
+
+							<button type="button" name="button" class="btn btn-large primary-button showAgregarProfesional">
+								Agregar profesional
+							</button>
+						</div>
+						<div class="content-filtros">
+							<button type="button" name="button" class="btn link-button" data-bs-toggle="modal" data-bs-target="#modalFiltrosProfesionales">
+								Aplicar filtros
+							</button>
+						</div>
+					</div>
+
+					<div class="col-12">
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">N°</th>
+									<th scope="col">Nombre del profesional</th>
+									<th scope="col">Profesión</th>
+									<th scope="col">Fecha registro</th>
+									<th scope="col">Venc. registro</th>
+									<th scope="col">Asignado</th>
+									<th scope="col">Habilitado</th>
+									<th scope="col">Favorito</th>
+									<th scope="col">Casos atendidos</th>
+									<th scope="col">Acciones</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">1</th>
+									<td>Richard Stephen Lévano Jiménez</td>
+									<td>Abogado</td>
+									<td>22/12/2022</td>
+									<td>22/12/2023</td>
+									<td>
+										<div class="form-check form-switch">
+											<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+										</div>
+									</td>
+									<td>
+										<div class="form-check form-switch">
+											<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+										</div>
+									</td>
+									<td>
+										<div class="form-check form-switch">
+											<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+										</div>
+									</td>
+									<td>10</td>
+									<td>
+										<button type="button" name="button" class="btn link-button">
+											Ver árbitro
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Faraón Love Shady</td>
+									<td>Dios del Trap</td>
+									<td>22/12/2022</td>
+									<td>22/12/2023</td>
+									<td>
+										<div class="form-check form-switch">
+											<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+										</div>
+									</td>
+									<td>
+										<div class="form-check form-switch">
+											<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+										</div>
+									</td>
+									<td>
+										<div class="form-check form-switch">
+											<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+										</div>
+									</td>
+									<td>10</td>
+									<td>
+										<button type="button" name="button" class="btn link-button">
+											Ver árbitro
+										</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="panel" id="agregarProfesional-panel">
+				<div class="row">
+					<div class="header-panel">
+						<small class="title-panel">
+							Profesionales
+						</small>
+						<h2>
+							Nuevo profesional
+						</h2>
+					</div>
+
+					<div class="col-lg-6 marginBottom-2">
+						<div class="accordion" id="accordionNuevoProfesional">
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="headingOne">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+										<div class="content-accordion-btn">
+											<span class="accordion-step">1</span>
+											Datos personales
+										</div>
+									</button>
+								</h2>
+								<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionNuevoProfesional">
+									<div class="accordion-body">
+										<form>
+											<div class="row g-3">
+												<div class="col-md-10 marginBottom-1 error-input-">
+													<label for="inputNameProfessional" class="form-label fw-b">Nombres</label>
+													<input type="text" class="form-control" id="inputNameProfessional">
+													<small class="text-help">
+														<span class="material-icons">
+															report_problem
+														</span>
+														Campo obligatorio
+													</small>
+												</div>
+
+												<div class="col-md-10 marginBottom-1 error-input-">
+													<label for="inputLastName" class="form-label fw-b">Apellido Paterno</label>
+													<input type="text" class="form-control" id="inputLastName">
+													<small class="text-help">
+														<span class="material-icons">
+															report_problem
+														</span>
+														Campo obligatorio
+													</small>
+												</div>
+
+												<div class="col-md-10 marginBottom-1 error-input-">
+													<label for="inputMotherLastName" class="form-label fw-b">Apellido Materno</label>
+													<input type="text" class="form-control" id="inputMotherLastName">
+													<small class="text-help">
+														<span class="material-icons">
+															report_problem
+														</span>
+														Campo obligatorio
+													</small>
+												</div>
+
+												<div class="col-md-10 marginBottom-1 error-input-">
+													<label for="inputId" class="form-label fw-b">DNI</label>
+													<input type="number" class="form-control" id="inputId">
+													<small class="text-help">
+														<span class="material-icons">
+															report_problem
+														</span>
+														Campo obligatorio
+													</small>
+												</div>
+
+												<div class="col-md-10 marginBottom-1 error-input-">
+													<label for="inputId" class="form-label fw-b">Fecha de nacimiento</label>
+													<input type="date" class="form-control" id="inputId">
+													<small class="text-help">
+														<span class="material-icons">
+															report_problem
+														</span>
+														Campo obligatorio
+													</small>
+												</div>
+
+												<div class="col-md-10 wrap-img-preview">
+													<div class="imageWrapper">
+														<img id="photoProfile" class="img-default">
+													</div>
+
+													<div class="content-info-upload-img">
+														<label for="inputNameProfessional" class="form-label fw-b">Foto</label>
+
+														<button class="file-upload btn link-button">
+															<input type="file" id="imgFileLogoEmpresa" class="file-input">
+															<img src="img/icons/add.svg" alt="plus icon">
+															Cargar archivo
+														</button>
+														<div class="textHelp-fileInput">
+															JPG, PNG. Tamaño máximo 100K
+														</div>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="headingTwo">
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+										<div class="content-accordion-btn">
+											<span class="accordion-step">2</span>
+											Datos de contacto
+										</div>
+									</button>
+								</h2>
+								<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionNuevoProfesional">
+									<div class="accordion-body">
+										<form>
+											<div class="row g-3">
+												<div class="col-md-10 marginBottom-1 error-input-">
+													<label for="inputEmail" class="form-label fw-b">Correo</label>
+													<input type="email" class="form-control" id="inputEmail">
+													<small class="text-help">
+														<span class="material-icons">
+															report_problem
+														</span>
+														Campo obligatorio
+													</small>
+												</div>
+
+												<div class="col-md-10 marginBottom-1 error-input-">
+													<label for="inputCelphone" class="form-label fw-b">Celular</label>
+													<input type="Number" class="form-control" id="inputCelphone">
+													<small class="text-help">
+														<span class="material-icons">
+															report_problem
+														</span>
+														Campo obligatorio
+													</small>
+												</div>
+
+												<div class="col-md-10 marginBottom-1 error-input-">
+													<label for="inputAddress" class="form-label fw-b">Dirección</label>
+													<input type="text" class="form-control" id="inputAddress">
+													<small class="text-help">
+														<span class="material-icons">
+															report_problem
+														</span>
+														Campo obligatorio
+													</small>
+												</div>
+											</div>
+
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="headingThree">
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+										<div class="content-accordion-btn">
+											<span class="accordion-step">3</span>
+											Información profesional
+										</div>
+									</button>
+								</h2>
+								<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionNuevoProfesional">
+									<div class="accordion-body">
+										<form>
+											<fieldset class="fieldset-profesion">
+												<div class="row g-3">
+													<div class="col-md-10 marginBottom-1 error-input-">
+														<label for="inputAddress" class="form-label fw-b">Profesión</label>
+														<select class="form-select" aria-label="Default select example">
+															<option selected>Seleccione</option>
+															<option value="1">One</option>
+															<option value="2">Two</option>
+															<option value="3">Three</option>
+														</select>
+														<small class="text-help">
+															<span class="material-icons">
+																report_problem
+															</span>
+															Campo obligatorio
+														</small>
+														<div class="form-check marginTop-0-5">
+															<input class="form-check-input" type="checkbox" value="" id="checkMainProfession">
+															<label class="form-check-label" for="checkMainProfession">
+																Marcar como profesión principal
+															</label>
+														</div>
+													</div>
+												</div>
+
+												<div class="row g-3">
+													<div class="col-md-3 marginBottom-1">
+														<label for="inputCollege" class="form-label fw-b">Colegio</label>
+														<input type="Text" class="form-control" id="inputCollege">
+														<small class="text-help">
+															<span class="material-icons">
+																report_problem
+															</span>
+															Campo obligatorio
+														</small>
+													</div>
+
+													<div class="col-md-7 marginBottom-1">
+														<label for="inputCollegeCode" class="form-label fw-b">Código de colegiatura</label>
+														<input type="Text" class="form-control" id="inputCollegeCode">
+														<small class="text-help">
+															<span class="material-icons">
+																report_problem
+															</span>
+															Campo obligatorio
+														</small>
+													</div>
+												</div>
+
+												<div class="col-10">
+													<hr>
+												</div>
+											</fieldset>
+
+											<fieldset class="fieldset-profesion">
+												<div class="row g-3">
+													<div class="col-md-10 marginBottom-1 error-input-">
+														<label for="inputProfession" class="form-label fw-b">Profesión</label>
+														<select class="form-select" aria-label="Default select example">
+															<option selected>Seleccione</option>
+															<option value="1">One</option>
+															<option value="2">Two</option>
+															<option value="3">Three</option>
+														</select>
+														<small class="text-help">
+															<span class="material-icons">
+																report_problem
+															</span>
+															Campo obligatorio
+														</small>
+													</div>
+												</div>
+
+												<div class="row g-3">
+													<div class="col-md-3 marginBottom-1">
+														<label for="inputCollege2" class="form-label fw-b">Colegio</label>
+														<input type="Text" class="form-control" id="inputCollege2">
+														<small class="text-help">
+															<span class="material-icons">
+																report_problem
+															</span>
+															Campo obligatorio
+														</small>
+													</div>
+
+													<div class="col-md-7 marginBottom-1">
+														<label for="inputCollegeCode2" class="form-label fw-b">Código de colegiatura</label>
+														<input type="Text" class="form-control" id="inputCollegeCode2">
+														<small class="text-help">
+															<span class="material-icons">
+																report_problem
+															</span>
+															Campo obligatorio
+														</small>
+													</div>
+												</div>
+											</fieldset>
+
+											<div class="row">
+												<div class="col-lg-10 marginBottom-1">
+													<div class="row">
+														<div class="content-btn-left col-6">
+															<button type="button" name="button" class="btn link-button-danger d-none-" data-bs-toggle="modal" data-bs-target="#modalEliminarProfesion">
+																Eliminar profesión
+															</button>
+														</div>
+														<div class="content-btn-right col-6">
+															<button type="button" name="button" class="btn btn-outline btn-icon" >
+																<span class="material-icons-outlined marginRight-0-5">
+																	add
+																</span>
+																Agregar profesión
+															</button>
+														</div>
+
+													</div>
+												</div>
+											</div>
+
+											<div class="row g-3">
+												<div class="col-lg-10 marginBottom-1">
+													<label for="inputUser" class="form-label-admin">Designación</label>
+													<div class="form-check">
+														<input class="form-check-input" type="checkbox" value="" id="checkContratacionPublicaNp">
+														<label class="form-check-label" for="checkContratacionPublicaNp">
+															Contratación Pública
+														</label>
+														<small class="tag-primary hide" id="tag-arbitro">Árbitro Único/Presidente</small>
+													</div>
+													<div class="form-check">
+														<input class="form-check-input" type="checkbox" value="" id="checkArbitrajeGeneralNp">
+														<label class="form-check-label" for="checkArbitrajeGeneralNp">
+															Árbitraje General
+														</label>
+													</div>
+													<div class="form-check">
+														<input class="form-check-input" type="checkbox" value="" id="checkArbitrajeEmergenciaNp">
+														<label class="form-check-label" for="checkArbitrajeEmergenciaNp">
+															Árbitraje de Emergencia
+														</label>
+													</div>
+													<div class="form-check">
+														<input class="form-check-input" type="checkbox" value="" id="checkPeritajeNp">
+														<label class="form-check-label" for="checkPeritajeNp">
+															Peritaje
+														</label>
+													</div>
+													<div class="form-check">
+														<input class="form-check-input" type="checkbox" value="" id="checkResolucionDisputasNp">
+														<label class="form-check-label" for="checkResolucionDisputasNp">
+															Junta de Resolución de Disputas
+														</label>
+													</div>
+													<small class="text-help">
+														<span class="material-icons">
+															report_problem
+														</span>
+														Campo obligatorio
+													</small>
+												</div>
+											</div>
+
+											<div class="row g-3">
+												<div class="col-lg-10 marginBottom-1">
+													<label for="inputUser" class="form-label-admin">Especialidad</label>
+													<div class="form-check">
+														<input class="form-check-input" type="checkbox" value="" id="checkContratacionEstadoNp">
+														<label class="form-check-label" for="checkContratacionEstadoNp">
+															Contratación con el Estado
+														</label>
+													</div>
+													<div class="form-check">
+														<input class="form-check-input" type="checkbox" value="" id="checkArbitrajeNp">
+														<label class="form-check-label" for="checkArbitrajeNp">
+															Árbitraje
+														</label>
+													</div>
+													<div class="form-check">
+														<input class="form-check-input" type="checkbox" value="" id="checkDerechoAdministrativoNp">
+														<label class="form-check-label" for="checkDerechoAdministrativoNp">
+															Derecho Administrativo
+														</label>
+													</div>
+													<div class="form-check">
+														<input class="form-check-input" type="checkbox" value="" id="checkRnaOsceNp">
+														<label class="form-check-label" for="checkRnaOsceNp">
+															RNA-OSCE
+														</label>
+													</div>
+													<small class="text-help">
+														<span class="material-icons">
+															report_problem
+														</span>
+														Campo obligatorio
+													</small>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-lg-10 marginBottom-2">
+													<label class="form-label-admin">Curriculum Vitae</label>
+													<div class="dragDropContent">
+														<div class="Form_control">
+															<input type="file" id="file" class="Form__input" />
+															<label for="file" class="Form__label">
+																<i class="fas fa-folder-open" id="iconFile"></i>
+																<span id="textFile">Agregar archivo</span>
+															</label>
+														</div>
+													</div>
+													<small class="text-help">
+														<span class="material-icons">
+															report_problem
+														</span>
+														Campo obligatorio
+													</small>
+												</div>
+											</div>
+
+										</form>
+
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="headingFour">
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+										<div class="content-accordion-btn">
+											<span class="accordion-step">4</span>
+											Gestión interna
+										</div>
+									</button>
+								</h2>
+								<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionNuevoProfesional">
+									<div class="accordion-body">
+										<form>
+											<div class="row g-3">
+												<div class="form-check form-switch">
+													<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchAsignadoNp">
+													<label class="form-check-label" for="flexSwitchAsignadoNp">Asignado</label>
+												</div>
+												<div class="form-check form-switch">
+													<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchHabilitadoNp">
+													<label class="form-check-label" for="flexSwitchHabilitadoNp">Habilitado</label>
+												</div>
+												<div class="form-check form-switch">
+													<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchFavoritoNp">
+													<label class="form-check-label" for="flexSwitchFavoritoNp">FavoritoNp</label>
+												</div>
+
+												<div class="content-cases-attended">
+													Casos atendidos: <span>20</span>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-12">
+						<div class="row">
+							<div class="col-lg-6 content-btns-controls-panel">
+								<button type="button" name="button" class="btn link-button showProfesionales">
+									Cancelar
+								</button>
+								<button type="button" name="button" class="btn btn-large primary-button" data-bs-toggle="modal" data-bs-target="#modalDatosGuardados">
+									Crear profesional
+								</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="panel" id="designacion-panel">
+				<div class="row">
+					<div class="wrap-header-panel marginBottom-2">
+						<div class="header-panel">
+							<small class="title-panel">
+								Datos
+							</small>
+							<h2>
+								Listado de tipos de designación
+							</h2>
+						</div>
+						<button type="button" name="button" class="btn btn-large primary-button showAgregarDesignacion">
+							Agregar tipo de designación
+						</button>
+					</div>
+
+					<div class="col-12">
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">N°</th>
+									<th scope="col">Nombre</th>
+									<th scope="col">Estado</th>
+									<th scope="col">Acciones</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">1</th>
+									<td>Contratación Pública</td>
+									<td>
+										<div class="form-check form-switch">
+											<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+										</div>
+									</td>
+									<td>
+										<button type="button" name="button" class="btn link-button">
+											Editar designación
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Arbitraje General</td>
+									<td>
+										<div class="form-check form-switch">
+											<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+										</div>
+									</td>
+									<td>
+										<button type="button" name="button" class="btn link-button">
+											Editar designación
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td>Arbitraje de Emergencia</td>
+									<td>
+										<div class="form-check form-switch">
+											<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+										</div>
+									</td>
+									<td>
+										<button type="button" name="button" class="btn link-button">
+											Editar designación
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">4</th>
+									<td>Peritaje</td>
+									<td>
+										<div class="form-check form-switch">
+											<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+										</div>
+									</td>
+									<td>
+										<button type="button" name="button" class="btn link-button">
+											Editar designación
+										</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="panel" id="agregarDesignacion-panel">
+				<div class="row">
+					<div class="header-panel">
+						<small class="title-panel">
+							Datos
+						</small>
+						<h2>
+							Nuevo tipo de designación
+						</h2>
+					</div>
+
+					<div class="col-lg-6 marginBottom-2">
+						<form>
+							<div class="row g-3">
+								<div class="col-md-10 marginBottom-1 error-input-">
+									<label for="inputNameTipoDesignacion" class="form-label fw-b">Nombre del tipo de designación</label>
+									<input type="text" class="form-control" id="inputNameTipoDesignacion">
+									<small class="text-help">
+										<span class="material-icons">
+											report_problem
+										</span>
+										Campo obligatorio
+									</small>
+								</div>
+							</div>
+
+							<div class="row g-3">
+								<div class="col-lg-10 marginBottom-1">
+									<label for="inputUser" class="form-label-admin">Especialidad</label>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="checkContratacionEstadoNtd">
+										<label class="form-check-label" for="checkContratacionEstadoNtd">
+											Contratación con el Estado
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="checkArbitrajeNtd">
+										<label class="form-check-label" for="checkArbitrajeNtd">
+											Árbitraje
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="checkDerechoAdministrativoNtd">
+										<label class="form-check-label" for="checkDerechoAdministrativoNtd">
+											Derecho Administrativo
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="checkRnaOsceNtd">
+										<label class="form-check-label" for="checkRnaOsceNtd">
+											RNA-OSCE
+										</label>
+									</div>
+									<small class="text-help">
+										<span class="material-icons">
+											report_problem
+										</span>
+										Campo obligatorio
+									</small>
+								</div>
+							</div>
+
+							<div class="row g-3">
+								<div class="col-md-10 marginBottom-1 error-input-">
+									<label for="inputTipoProfesional" class="form-label fw-b">Tipo de profesional</label>
+									<input type="text" class="form-control" id="inputTipoProfesional" placeholder="Ejemplo: Árbitro">
+									<small class="text-help">
+										<span class="material-icons">
+											report_problem
+										</span>
+										Campo obligatorio
+									</small>
+								</div>
+							</div>
+
+							<div class="col-md-10 marginBottom-1">
+								<div class="form-check form-switch">
+									<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchNtdEstado" checked>
+									<label class="form-check-label" for="flexSwitchNtdEstado">Estado</label>
+								</div>
+							</div>
+
+							<div class="col-md-10 marginBottom-1">
+								<button type="button" name="button" class="btn link-button-danger" data-bs-toggle="modal" data-bs-target="#modalEliminarDesignacion">
+									Eliminar tipo de designación
+								</button>
+							</div>
+
+						</form>
+					</div>
+
+					<div class="col-lg-10">
+						<div class="row">
+							<div class="col-lg-6 content-btns-controls-panel">
+								<button type="button" name="button" class="btn link-button showDesignacion">
+									Cancelar
+								</button>
+								<button type="button" name="button" class="btn btn-large primary-button" data-bs-toggle="modal" data-bs-target="#modalDatosGuardados">
+									Crear tipo de designación
+								</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="panel" id="especialidades-panel">
+				<div class="row">
+					<div class="wrap-header-panel marginBottom-2">
+						<div class="header-panel">
+							<small class="title-panel">
+								Datos
+							</small>
+							<h2>
+								Listado de especialidades
+							</h2>
+						</div>
+						<button type="button" name="button" class="btn btn-large primary-button showAgregarEspecialidad">
+							Agregar especialidad
+						</button>
+					</div>
+
+					<div class="col-12">
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">N°</th>
+									<th scope="col">Nombre</th>
+									<th scope="col">Estado</th>
+									<th scope="col">Acciones</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">1</th>
+									<td>Contratación con el Estado</td>
+									<td>
+										<div class="form-check form-switch">
+											<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+										</div>
+									</td>
+									<td>
+										<button type="button" name="button" class="btn link-button">
+											Editar especialidad
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Arbitraje</td>
+									<td>
+										<div class="form-check form-switch">
+											<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+										</div>
+									</td>
+									<td>
+										<button type="button" name="button" class="btn link-button">
+											Editar especialidad
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td>RNA-OSCE</td>
+									<td>
+										<div class="form-check form-switch">
+											<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+										</div>
+									</td>
+									<td>
+										<button type="button" name="button" class="btn link-button">
+											Editar especialidad
+										</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="panel" id="agregarEspecialidad-panel">
+				<div class="row">
+					<div class="header-panel">
+						<small class="title-panel">
+							Datos
+						</small>
+						<h2>
+							Nueva especialidad
+						</h2>
+					</div>
+
+					<div class="col-lg-6 marginBottom-2">
+						<form>
+
+							<div class="row g-3">
+								<div class="col-md-10 marginBottom-1 error-input-">
+									<label for="inputNombreEspecialidad" class="form-label fw-b">Nombre de la especialidad</label>
+									<input type="text" class="form-control" id="inputNombreEspecialidad">
+									<small class="text-help">
+										<span class="material-icons">
+											report_problem
+										</span>
+										Campo obligatorio
+									</small>
+								</div>
+							</div>
+
+							<div class="col-md-10 marginBottom-1">
+								<div class="form-check form-switch">
+									<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchNtdEstado" checked>
+									<label class="form-check-label" for="flexSwitchNtdEstado">Estado</label>
+								</div>
+							</div>
+
+							<div class="col-md-10 marginBottom-1">
+								<button type="button" name="button" class="btn link-button-danger" data-bs-toggle="modal" data-bs-target="#modalEliminarEspecialidad">
+									Eliminar especialidad
+								</button>
+							</div>
+
+						</form>
+					</div>
+
+					<div class="col-lg-10">
+						<div class="row">
+							<div class="col-lg-6 content-btns-controls-panel">
+								<button type="button" name="button" class="btn link-button showEspecialidad">
+									Cancelar
+								</button>
+								<button type="button" name="button" class="btn btn-large primary-button" data-bs-toggle="modal" data-bs-target="#modalDatosGuardados">
+									Crear especialidad
+								</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="panel" id="profesiones-panel">
+				<div class="row">
+					<div class="wrap-header-panel marginBottom-2">
+						<div class="header-panel">
+							<small class="title-panel">
+								Datos
+							</small>
+							<h2>
+								Listado de profesiones
+							</h2>
+						</div>
+						<button type="button" name="button" class="btn btn-large primary-button showAgregarProfesion">
+							Agregar profesion
+						</button>
+					</div>
+
+					<div class="col-12">
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">N°</th>
+									<th scope="col">Nombre</th>
+									<th scope="col">Estado</th>
+									<th scope="col">Acciones</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">1</th>
+									<td>Abogado</td>
+									<td>
+										<div class="form-check form-switch">
+											<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+										</div>
+									</td>
+									<td>
+										<button type="button" name="button" class="btn link-button">
+											Editar profesión
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Ingeniero Civil</td>
+									<td>
+										<div class="form-check form-switch">
+											<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+										</div>
+									</td>
+									<td>
+										<button type="button" name="button" class="btn link-button">
+											Editar profesión
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td>Arquitecto</td>
+									<td>
+										<div class="form-check form-switch">
+											<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+										</div>
+									</td>
+									<td>
+										<button type="button" name="button" class="btn link-button">
+											Editar profesión
+										</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="panel" id="agregarProfesion-panel">
+				<div class="row">
+					<div class="header-panel">
+						<small class="title-panel">
+							Datos
+						</small>
+						<h2>
+							Nueva profesión
+						</h2>
+					</div>
+
+					<div class="col-lg-6 marginBottom-2">
+						<form>
+
+							<div class="row g-3">
+								<div class="col-md-10 marginBottom-1 error-input-">
+									<label for="inputNombreProfesion" class="form-label fw-b">Nombre de la profesión</label>
+									<input type="text" class="form-control" id="inputNombreProfesion">
+									<small class="text-help">
+										<span class="material-icons">
+											report_problem
+										</span>
+										Campo obligatorio
+									</small>
+								</div>
+							</div>
+
+							<div class="col-md-10 marginBottom-1">
+								<div class="form-check form-switch">
+									<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchNtdProfesionEstado" checked>
+									<label class="form-check-label" for="flexSwitchNtdProfesionEstado">Estado</label>
+								</div>
+							</div>
+
+							<div class="col-md-10 marginBottom-1">
+								<button type="button" name="button" class="btn link-button-danger" data-bs-toggle="modal" data-bs-target="#modalEliminarProfesion">
+									Eliminar profesión
+								</button>
+							</div>
+
+						</form>
+					</div>
+
+					<div class="col-lg-10">
+						<div class="row">
+							<div class="col-lg-6 content-btns-controls-panel">
+								<button type="button" name="button" class="btn link-button showProfesiones">
+									Cancelar
+								</button>
+								<button type="button" name="button" class="btn btn-large primary-button" data-bs-toggle="modal" data-bs-target="#modalDatosGuardados">
+									Crear especialidad
+								</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="panel" id="casos-panel">
+				<div class="row">
+					<div class="header-panel">
+						<small class="title-panel">
+							Casos
+						</small>
+						<h2>
+							Listado de casos
+						</h2>
+					</div>
+
+					<div class="wrap-controls-admin marginBottom-2">
+						<div class="content-controls marginBottom-1">
+							<div class="col-xl-3">
+								<div class="search-input">
+									<input type="text" class="form-control" placeholder="Buscar casos" aria-label="Recipient's username" aria-describedby="button-addon2">
+									<button class="btn material-icons-outlined" type="button">
+										search
+									</button>
+								</div>
+								<small class="text-help">
+									<span class="material-icons">
+										report_problem
+									</span>
+									El usuario es incorrecto
+								</small>
+							</div>
+						</div>
+						<div class="content-filtros">
+							<button type="button" name="button" class="btn link-button" data-bs-toggle="modal" data-bs-target="#modalFiltrosCasos">
+								Aplicar filtros
+							</button>
+						</div>
+					</div>
+
+					<div class="col-12">
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">N°</th>
+									<th scope="col">Expediente</th>
+									<th scope="col">Nombre del caso</th>
+									<th scope="col">Tipo de designación</th>
+									<th scope="col">Entidad</th>
+									<th scope="col">Contratista</th>
+									<th scope="col">Presidente</th>
+									<th scope="col">Favorito</th>
+									<th scope="col">Único</th>
+									<th scope="col">Estado</th>
+									<th scope="col">Acciones</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">1</th>
+									<td>2022-0192</td>
+									<td>
+										Consorcio San Juan vs Municipalidad metropolitana de lima
+									</td>
+									<td>Arbitraje en contratación pública</td>
+									<td>22-12-2023</td>
+									<td>
+										<span class="material-icons success-color ">
+											check_circle
+										</span>
+									</td>
+									<td>
+										<span class="material-icons success-color ">
+											check_circle
+										</span>
+									</td>
+									<td>
+										<span class="material-icons success-color ">
+											check_circle
+										</span>
+									</td>
+									<td>
+										<span class="material-icons success-color ">
+											check_circle
+										</span>
+									</td>
+									<td>
+										<div class="form-check form-switch ">
+											<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+										</div>
+									</td>
+									<td>
+										<button type="button" name="button" class="btn link-button showEditarCaso">
+											Editar caso
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">1</th>
+									<td>2022-0192</td>
+									<td>Nombre del caso</td>
+									<td>Contratación Pública</td>
+									<td>22/12/2023</td>
+									<td>
+										<span class="material-icons success-color ">
+											check_circle
+										</span>
+									</td>
+									<td>
+										<span class="material-icons success-color ">
+											check_circle
+										</span>
+									</td>
+									<td>
+										<span class="material-icons success-color ">
+											check_circle
+										</span>
+									</td>
+									<td>
+										-
+									</td>
+									<td>
+										<div class="form-check form-switch">
+											<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+										</div>
+									</td>
+									<td>
+										<button type="button" name="button" class="btn link-button showEditarCaso">
+											Editar caso
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">1</th>
+									<td>2022-0192</td>
+									<td>Nombre del caso</td>
+									<td>Contratación Pública</td>
+									<td>22/12/2023</td>
+									<td>
+										<span class="material-icons success-color ">
+											check_circle
+										</span>
+									</td>
+									<td>
+										<span class="material-icons success-color ">
+											check_circle
+										</span>
+									</td>
+									<td>
+										<span class="material-icons success-color ">
+											check_circle
+										</span>
+									</td>
+									<td>
+										-
+									</td>
+									<td>
+										<div class="form-check form-switch">
+											<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+										</div>
+									</td>
+									<td>
+										<button type="button" name="button" class="btn link-button showEditarCaso">
+											Editar caso
+										</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="panel" id="editar-caso-panel">
+				<div class="row">
+					<div class="header-panel">
+						<small class="title-panel">
+							Casos
+						</small>
+						<h2>
+							Editar caso
+						</h2>
+					</div>
+
+					<div class="col-lg-6 marginBottom-2">
+						<form>
+							<div class="row g-3">
+								<div class="col-md-10 marginBottom-1 error-input-">
+									<label for="inputExpediente" class="form-label fw-b">Expediente</label>
+									<input type="text" class="form-control" id="inputExpediente" placeholder="2022-0192">
+									<small class="text-help">
+										<span class="material-icons">
+											report_problem
+										</span>
+										Campo obligatorio
+									</small>
+								</div>
+
+								<div class="col-md-10 marginBottom-1 error-input-">
+									<label for="inputNombreCaso" class="form-label fw-b">Nombre del caso</label>
+									<input type="text" class="form-control" id="inputNombreCaso" placeholder="Nombre del caso">
+									<small class="text-help">
+										<span class="material-icons">
+											report_problem
+										</span>
+										Campo obligatorio
+									</small>
+								</div>
+
+								<div class="col-md-10 marginBottom-1 error-input-">
+									<label for="inputAddress" class="form-label fw-b">Tipo de designación</label>
+									<select class="form-select" aria-label="Default select example">
+										<option selected value="1">Contratación pública</option>
+										<option value="2">Arbitraje General</option>
+										<option value="3">Arbitraje de Emergencia</option>
+										<option value="4">Peritaje</option>
+										<option value="5">Junta de Resolución de Disputas</option>
+									</select>
+									<small class="text-help">
+										<span class="material-icons">
+											report_problem
+										</span>
+										Campo obligatorio
+									</small>
+								</div>
+
+								<div class="col-md-10 marginBottom-1 error-input-">
+									<label for="inputFechaRegistro" class="form-label fw-b">Fecha de registro</label>
+									<input type="text" class="form-control" id="inputFechaRegistro" placeholder="09/03/2022" disabled>
+									<small class="text-help">
+										<span class="material-icons">
+											report_problem
+										</span>
+										Campo obligatorio
+									</small>
+								</div>
+
+								<div class="col-lg-10 marginBottom-1">
+									<label for="inputUser" class="form-label-admin">Sorteos</label>
+									<div class="wrap-sorteo-estado">
+										<div class="header-sorteo-estado">
+											<span class="material-icons success-color">
+												check_circle
+											</span>
+											<div class="fw-b">
+												Entidad
+											</div>
+										</div>
+										<div class="body-sorteo-estado">
+											<div>
+												21/05/2022
+											</div>
+											<ul>
+												<li>Abogado 1</li>
+												<li>Abogado 2</li>
+											</ul>
+										</div>
+									</div>
+									<div class="wrap-sorteo-estado">
+										<div class="header-sorteo-estado">
+											<span class="material-icons success-color">
+												check_circle
+											</span>
+											<div class="fw-b">
+												Contratista
+											</div>
+										</div>
+										<div class="body-sorteo-estado">
+											<div>
+												21/05/2022
+											</div>
+											<ul>
+												<li>Abogado 1</li>
+												<li>Abogado 2</li>
+											</ul>
+										</div>
+									</div>
+									<div class="wrap-sorteo-estado">
+										<div class="header-sorteo-estado">
+											<span class="material-icons disabled-color">
+												circle
+											</span>
+											<div class="fw-b">
+												Presidente
+											</div>
+										</div>
+										<div class="body-sorteo-estado d-none">
+											<div>
+												21/05/2022
+											</div>
+											<ul>
+												<li>Abogado 1</li>
+												<li>Abogado 2</li>
+											</ul>
+										</div>
+									</div>
+									<div class="wrap-sorteo-estado">
+										<div class="header-sorteo-estado">
+											<span class="material-icons disabled-color">
+												circle
+											</span>
+											<div class="fw-b">
+												Único
+											</div>
+										</div>
+										<div class="body-sorteo-estado d-none">
+											<div>
+												21/05/2022
+											</div>
+											<ul>
+												<li>Abogado 1</li>
+												<li>Abogado 2</li>
+											</ul>
+										</div>
+									</div>
+									<small class="text-help">
+										<span class="material-icons">
+											report_problem
+										</span>
+										Campo obligatorio
+									</small>
+								</div>
+							</div>
+
+							<div class="col-md-10 marginBottom-1">
+								<div class="form-check form-switch">
+									<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchEstadoEc" checked>
+									<label class="form-check-label" for="flexSwitchEstadoEc">Estado</label>
+								</div>
+							</div>
+
+
+
+							<div class="col-md-10 marginBottom-1">
+								<button type="button" name="button" class="btn link-button-danger" data-bs-toggle="modal" data-bs-target="#modalEliminarCaso">
+									Eliminar caso
+								</button>
+							</div>
+
+						</form>
+					</div>
+
+					<div class="col-lg-10">
+						<div class="row">
+							<div class="col-lg-6 content-btns-controls-panel">
+								<button type="button" name="button" class="btn link-button showCasos">
+									Cancelar
+								</button>
+								<button type="button" name="button" class="btn btn-large primary-button" data-bs-toggle="modal" data-bs-target="#modalDatosGuardados">
+									Guardar cambios
+								</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="panel" id="usuarios-panel">
+				<div class="row">
+					<div class="header-panel">
+						<small class="title-panel">
+							Usuarios
+						</small>
+						<h2>
+							Listado de usuarios
+						</h2>
+					</div>
+
+					<div class="col-12">
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">N°</th>
+									<th scope="col">Usuario</th>
+									<th scope="col">Sistema Administrativo</th>
+									<th scope="col">Sistema Aleatorio</th>
+									<th scope="col">Estado</th>
+									<th scope="col">Acciones</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">1</th>
+									<td>fatherzeus</td>
+									<td>
+										<span class="material-icons success-color">
+											check_circle
+										</span>
+									</td>
+									<td>
+										<span class="material-icons success-color ">
+											check_circle
+										</span>
+									</td>
+									<td>
+										<div class="form-check form-switch">
+											<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+										</div>
+									</td>
+									<td>
+										<button type="button" name="button" class="btn link-button showEditarUsuario">
+											Editar usuario
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>secretaria</td>
+									<td>
+										<span class="material-icons disabled-color ">
+											check_circle
+										</span>
+									</td>
+									<td>
+										<span class="material-icons success-color ">
+											check_circle
+										</span>
+									</td>
+									<td>
+										<div class="form-check form-switch">
+											<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+										</div>
+									</td>
+									<td>
+										<button type="button" name="button" class="btn link-button showEditarUsuario">
+											Editar usuario
+										</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="panel" id="editar-usuario-panel">
+				<div class="row">
+					<div class="header-panel">
+						<small class="title-panel">
+							Usuarios
+						</small>
+						<h2>
+							Editar usuario
+						</h2>
+					</div>
+
+					<div class="col-lg-6 marginBottom-2">
+						<form>
+
+							<div class="row g-3">
+								<div class="col-md-10 marginBottom-1 error-input-">
+									<label for="inputNombreUsuarioeditar" class="form-label fw-b">Nombre del usuario</label>
+									<input type="text" class="form-control" id="inputNombreUsuarioeditar" placeholder="fatherzeus">
+									<small class="text-help">
+										<span class="material-icons">
+											report_problem
+										</span>
+										Campo obligatorio
+									</small>
+								</div>
+							</div>
+
+							<div class="col-lg-10 marginBottom-1">
+								<label for="inputUser" class="form-label-admin">Accesos</label>
+								<div class="form-check form-switch">
+									<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchEditarAcceso1" checked>
+									<label class="form-check-label" for="flexSwitchEditarAcceso1">Sistema Aleatorio</label>
+								</div>
+								<div class="form-check form-switch">
+									<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchEditarAcceso2" checked>
+									<label class="form-check-label" for="flexSwitchEditarAcceso2">Sistema Administrativo</label>
+								</div>
+								<small class="text-help">
+									<span class="material-icons">
+										report_problem
+									</span>
+									Campo obligatorio
+								</small>
+							</div>
+
+							<div class="col-md-10 marginBottom-1">
+								<div class="form-check form-switch">
+									<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchNtdProfesionEstado" checked>
+									<label class="form-check-label" for="flexSwitchNtdProfesionEstado">Estado</label>
+								</div>
+							</div>
+
+							<div class="col-md-10 marginBottom-1">
+								<button type="button" name="button" class="btn link-button-danger" data-bs-toggle="modal" data-bs-target="#modalEliminarUsuario">
+									Eliminar usuario
+								</button>
+							</div>
+
+						</form>
+					</div>
+
+					<div class="col-lg-10">
+						<div class="row">
+							<div class="col-lg-6 content-btns-controls-panel">
+								<button type="button" name="button" class="btn link-button showUsuarios">
+									Cancelar
+								</button>
+								<button type="button" name="button" class="btn btn-large primary-button" data-bs-toggle="modal" data-bs-target="#modalDatosGuardados">
+									Guardar cambios
+								</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+		<!-- End main panel -->
+	</main>
+
+	<!-- LOADER -->
+	<div class="loader">
+		<img src="img/icons/loader.gif" alt="">
+		<span>Cargando...</span>
+	</div>
+	<!-- END LOADER -->
+
+	<!-- Modals -->
+
+
+	<!-- Modal -->
+	<div class="modal fade modalInfo" id="modalContraOlvidada" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<h1 class="modal-title marginBottom-1-5 text-center">Recuperación de contraseña</h1>
+					<p class="text-center">
+						Ingresa tu usuario para solicitar la recuperación de tu contraseña:
+					</p>
+					<div class="marginBottom-1">
+						<label for="inputUser" class="form-label">Usuario</label>
+						<input type="text" class="form-control" id="inputUser">
+						<small class="text-help">
+							<span class="material-icons">
+								report_problem
+							</span>
+							El usuario es incorrecto
+						</small>
+					</div>
+				</div>
+				<div class="modal-footer marginBottom-2">
+					<button type="button" class="btn btn-large primary-button" data-bs-dismiss="modal">
+						Solicitar recuperación
+					</button>
+					<button type="button" class="btn btn-large link-button" data-bs-dismiss="modal">
+						Cancelar
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modalInfo" id="modalFiltrosProfesionales" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<h1 class="modal-title marginBottom-1-5 text-center">Selecciona los filtros</h1>
+
+					<div class="row">
+						<div class="col-lg-6 marginBottom-2">
+							<div class="accordion accordionCollapse" id="accordionFiltroAsignacion">
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingCollapseFiltroAsignacion">
+										<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiltroAsignacion" aria-expanded="false" aria-controls="collapseFiltroAsignacion">
+											Asignación
+										</button>
+									</h2>
+									<div id="collapseFiltroAsignacion" class="accordion-collapse collapse" aria-labelledby="headingCollapseFiltroAsignacion" data-bs-parent="#accordionFiltroAsignacion">
+										<div class="accordion-body">
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="checkAsignado" checked>
+												<label class="form-check-label" for="checkAsignado">
+													Asignado
+												</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="checkNoAsignado">
+												<label class="form-check-label" for="checkNoAsignado">
+													No Asignado
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<small class="text-help">
+								<span class="material-icons">
+									report_problem
+								</span>
+								Campo obligatorio
+							</small>
+						</div>
+
+						<div class="col-lg-6 marginBottom-2">
+							<div class="accordion accordionCollapse" id="accordionFiltroEstado">
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingCollapseFiltroEstado">
+										<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiltroEstado" aria-expanded="false" aria-controls="collapseFiltroEstado">
+											Estado
+										</button>
+									</h2>
+									<div id="collapseFiltroEstado" class="accordion-collapse collapse" aria-labelledby="headingCollapseFiltroEstado" data-bs-parent="#accordionFiltroEstado">
+										<div class="accordion-body">
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="checkHabilitado">
+												<label class="form-check-label" for="checkHabilitado">
+													Habilitado
+												</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="checkNoHabilitado">
+												<label class="form-check-label" for="checkNoHabilitado">
+													No Habilitado
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<small class="text-help">
+								<span class="material-icons">
+									report_problem
+								</span>
+								Campo obligatorio
+							</small>
+						</div>
+
+						<div class="col-lg-6 marginBottom-2">
+							<div class="accordion accordionCollapse" id="accordionFiltroDesignacion">
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingCollapseFiltroDesignacion">
+										<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiltroDesignacion" aria-expanded="false" aria-controls="collapseFiltroDesignacion">
+											Tipo de Designación
+										</button>
+									</h2>
+									<div id="collapseFiltroDesignacion" class="accordion-collapse collapse" aria-labelledby="headingCollapseFiltroDesignacion" data-bs-parent="#accordionFiltroDesignacion">
+										<div class="accordion-body">
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="checkContratacionPublica">
+												<label class="form-check-label" for="checkContratacionPublica">
+													Contratación Pública
+												</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="checkArbitrajeGeneral">
+												<label class="form-check-label" for="checkArbitrajeGeneral">
+													Arbitraje General
+												</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="checkArbitrajeEmergencia">
+												<label class="form-check-label" for="checkArbitrajeEmergencia">
+													Arbitraje de Emergencia
+												</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="checkArbitrajePeritaje">
+												<label class="form-check-label" for="checkArbitrajePeritaje">
+													Peritaje
+												</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="checkResolucionDisputas">
+												<label class="form-check-label" for="checkResolucionDisputas">
+													Junta de Resolución de Disputas
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<small class="text-help">
+								<span class="material-icons">
+									report_problem
+								</span>
+								Campo obligatorio
+							</small>
+						</div>
+
+						<div class="col-lg-6 marginBottom-2">
+							<div class="accordion accordionCollapse" id="accordionFiltroEspecialidades">
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingCollapseFiltroEspecialidades">
+										<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiltroEspecialidades" aria-expanded="false" aria-controls="collapseFiltroEspecialidades">
+											Especialidades
+										</button>
+									</h2>
+									<div id="collapseFiltroEspecialidades" class="accordion-collapse collapse" aria-labelledby="headingCollapseFiltroEspecialidades" data-bs-parent="#accordionFiltroEspecialidades">
+										<div class="accordion-body">
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="checkContratacionEstado">
+												<label class="form-check-label" for="checkContratacionEstado">
+													Contratación con el estado
+												</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="checkArbitraje">
+												<label class="form-check-label" for="checkArbitraje">
+													Arbitraje
+												</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="checkDerechoAdministrativo">
+												<label class="form-check-label" for="checkDerechoAdministrativo">
+													Derecho Administrativo
+												</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="checkRnaOsce">
+												<label class="form-check-label" for="checkRnaOsce">
+													RNA-OSCE
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<small class="text-help">
+								<span class="material-icons">
+									report_problem
+								</span>
+								Campo obligatorio
+							</small>
+						</div>
+
+						<div class="col-lg-6 marginBottom-2">
+							<div class="accordion accordionCollapse" id="accordionFiltroArbitraje">
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingCollapseFiltroArbitraje">
+										<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiltroArbitraje" aria-expanded="false" aria-controls="collapseFiltroArbitraje">
+											Tipo de Arbitraje
+										</button>
+									</h2>
+									<div id="collapseFiltroArbitraje" class="accordion-collapse collapse" aria-labelledby="headingCollapseFiltroArbitraje" data-bs-parent="#accordionFiltroArbitraje">
+										<div class="accordion-body">
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="checkArbitroPresidenteUnico">
+												<label class="form-check-label" for="checkArbitroPresidenteUnico">
+													Árbitro Presidente/Único
+												</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="checkArbitroParte">
+												<label class="form-check-label" for="checkArbitroParte">
+													Árbitro Parte
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<small class="text-help">
+								<span class="material-icons">
+									report_problem
+								</span>
+								Campo obligatorio
+							</small>
+						</div>
+					</div>
+
+				</div>
+				<div class="modal-footer marginBottom-2">
+					<button type="button" class="btn btn-large primary-button" data-bs-dismiss="modal">
+						Aplicar filtros
+					</button>
+					<button type="button" class="btn btn-large link-button" data-bs-dismiss="modal">
+						Cancelar
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modalInfo" id="modalDatosGuardados" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body text-left">
+					<div class="content-icon-modal">
+						<span class="material-icons success-color">
+							check_circle
+						</span>
+					</div>
+					<h1 class="modal-title marginBottom-1-5 text-center">Datos guardados con éxito</h1>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn link-button" data-bs-dismiss="modal">
+						Cerrar
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modalInfo" id="modalEliminarDesignacion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="modal-subtitle">
+						Estás eliminando el tipo de designación:
+					</p>
+					<h2 class="modal-title marginBottom-1-5 text-center">Junta de Resolución de Disputas</h2>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger btn-large" data-bs-dismiss="modal">
+						Eliminar
+					</button>
+					<button type="button" class="btn link-button" data-bs-dismiss="modal">
+						Cancelar
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modalInfo" id="modalEliminarEspecialidad" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="modal-subtitle">
+						Estás eliminando la especialidad:
+					</p>
+					<h2 class="modal-title marginBottom-1-5 text-center">Derecho Administrativo</h2>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger btn-large" data-bs-dismiss="modal">
+						Eliminar
+					</button>
+					<button type="button" class="btn link-button" data-bs-dismiss="modal">
+						Cancelar
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modalInfo" id="modalEliminarProfesion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="modal-subtitle">
+						Estás eliminando la profesión:
+					</p>
+					<h2 class="modal-title marginBottom-1-5 text-center">Ingeniero de minas</h2>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger btn-large" data-bs-dismiss="modal">
+						Eliminar
+					</button>
+					<button type="button" class="btn link-button" data-bs-dismiss="modal">
+						Cancelar
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modalInfo" id="modalEliminarCaso" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="modal-subtitle">
+						Estás eliminando el caso:
+					</p>
+					<h2 class="modal-title marginBottom-1-5 text-center">Nombre del caso</h2>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger btn-large" data-bs-dismiss="modal">
+						Eliminar
+					</button>
+					<button type="button" class="btn link-button" data-bs-dismiss="modal">
+						Cancelar
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modalInfo" id="modalEliminarUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="modal-subtitle">
+						Estás eliminando al usuario:
+					</p>
+					<h2 class="modal-title marginBottom-1-5 text-center">Nombre del usuario</h2>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger btn-large" data-bs-dismiss="modal">
+						Eliminar
+					</button>
+					<button type="button" class="btn link-button" data-bs-dismiss="modal">
+						Cancelar
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modalInfo" id="modalFiltrosCasos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<h1 class="modal-title marginBottom-1-5 text-center">Selecciona los filtros</h1>
+
+					<div class="row">
+						<div class="col-lg-6 marginBottom-2">
+							<label for="inputUser" class="form-label-admin">Tipo de Designación</label>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="checkContratacionPublicaFc">
+								<label class="form-check-label" for="checkContratacionPublicaFc">
+									Contratación Pública
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="checkArbitrajeGeneralFcFc">
+								<label class="form-check-label" for="checkArbitrajeGeneralFcFc">
+									Arbitraje General
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="checkArbitrajeEmergenciaFcFc">
+								<label class="form-check-label" for="checkArbitrajeEmergenciaFcFc">
+									Arbitraje de Emergencia
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="checkArbitrajePeritajeFcFc">
+								<label class="form-check-label" for="checkArbitrajePeritajeFcFc">
+									Peritaje
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="checkResolucionDisputasFcFc">
+								<label class="form-check-label" for="checkResolucionDisputasFcFc">
+									Junta de Resolución de Disputas
+								</label>
+							</div>
+							<small class="text-help">
+								<span class="material-icons">
+									report_problem
+								</span>
+								Campo obligatorio
+							</small>
+						</div>
+
+						<div class="col-lg-6 marginBottom-2">
+							<label for="inputUser" class="form-label-admin">Estado</label>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="checkHabilitadoFc">
+								<label class="form-check-label" for="checkHabilitadoFc">
+									Habilitado
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="checkNoHabilitadoFc">
+								<label class="form-check-label" for="checkNoHabilitadoFc">
+									No Habilitado
+								</label>
+							</div>
+							<small class="text-help">
+								<span class="material-icons">
+									report_problem
+								</span>
+								Campo obligatorio
+							</small>
+						</div>
+					</div>
+
+				</div>
+				<div class="modal-footer marginBottom-2">
+					<button type="button" class="btn btn-large primary-button" data-bs-dismiss="modal">
+						Aplicar filtros
+					</button>
+					<button type="button" class="btn btn-large link-button" data-bs-dismiss="modal">
+						Cancelar
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Fin Modals -->
+
+	<!--   Bootstrap JS Files   -->
+	<script src="js/bootstrap/jquery.3.2.1.min.js"></script>
+	<script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
