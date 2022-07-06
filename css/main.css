@@ -1,20 +1,28 @@
 /* Estilos Generales */
 :root {
-  --n-01: #2D2D2D;
-  --g-01: #757677;
-  --g-02: #BCBEBE;
-  --g-03: #EBECEC;
-  --g-04: #F0F0F5;
-  --b-01: #FFFFFF;
-  --a-01: #114357;
-  --a-02: #286781;
-  --a-03:#4DADBC;
-  --c-01: #C5DADE;
-  --c-02: #E6EEEF;
-  --error: #DF2020;
-  --warning: #FFB700;
-  --info: #1A58DD;
-  --success: #06C170;
+  --dark: #14142B;
+  --dark-light: #4E4B66;
+  --gray: #6E7191;
+  --gray-medium: #A0A3BD;
+  --gray-ligth: #EFF0F6;
+  --smoke: #E2E2E2;
+  --smoke-light: #EFEFEF;
+  --white: #FCFCFC;
+  --primary: #FFCE00;
+  --primary-dark: #E6B800;
+  --primary-light: #FAE27B;
+  --danger: #EB0046;
+  --danger-dark: #A20F1D;
+  --danger-light: #F8D7DA;
+  --info: #057BA6;
+  --info-dark: #041E49;
+  --info-light: #C2E7FF;
+  --warning: #FF9033;
+  --warning-dark: #6B3003;
+  --warning-light: #FFCF92;
+  --success: #36AE7C;
+  --success-dark: #094B28;
+  --success-light: #C1F8CF;
 }
 
 html {
@@ -28,8 +36,8 @@ html {
 }
 
 body {
-  color: var(--a-01);
-  font-family: 'Roboto', sans-serif;
+  color: var(--dark);
+  font-family: 'Poppins', sans-serif;
   line-height: 1.5rem;
 }
 
