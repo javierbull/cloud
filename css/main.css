@@ -377,7 +377,7 @@ h3 {
   position: relative;
 }
 
-.wrap-img-login h1 {
+.wrap-img-login h2 {
   z-index: 1000;
   color: var(--white);
   font-size: 4em;
@@ -386,7 +386,7 @@ h3 {
   /*  animation-iteration-count: infinite;*/
 }
 
-.wrap-img-login h1 span {
+.wrap-img-login h2 span {
   display: block;
   color: var(--primary);
 }
@@ -401,4 +401,39 @@ video {
   object-position: center;
 }
 /* Wrap img login */
+
+/* Wrap form login */
+.wrap-form-login {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 64px;
+  text-align: center;
+}
+
+.form-login {
+  background-color: var(--info-light);
+  width: 300px;
+
+}
+
+.form-group {
+ margin-bottom: 1rem;
+ text-align: left;
+}
+
+.field-icon {
+  background-color: var(--white);
+  cursor: pointer;
+  float: right;
+  margin-left: -25px;
+  margin-top: -26px;
+  margin-right: 11.250px;
+  position: relative;
+  z-index: 2;
+  color: var(--dark);
+}
+
+/* End Wrap form login */
 /* END LOGIN */

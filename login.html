@@ -32,13 +32,32 @@
 	<main class="container-fluid">
 		<div class="row">
 			<div class="col-lg-6 wrap-img-login">
-				<h1 class="animated fadeInUp">
+				<h2 class="animated fadeInUp">
 					Sistema <span>Bee Cloud</span>
-				</h1>
+				</h2>
 
 				<video autoplay muted loop>
 					<source src="video/login.mp4" type="video/mp4">
 				</video>
+			</div>
+
+			<div class="col-lg-6 wrap-form-login">
+				<div class="form-login">
+					<h1>
+						Iniciar sesión
+					</h1>
+					<div class="form-group">
+						<label for="inputUserLogin" class="form-label">Usuario</label>
+						<input type="email" class="form-control" id="inputUserLogin" placeholder="Ingresa tu usuario">
+					</div>
+
+					<div class="form-group">
+						<label for="password-field">Contraseña</label>
+						<input id="password-field" type="password" class="form-control" name="password" placeholder="Ingresa tu contraseña">
+						<span toggle="#password-field" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+						<small class="text-help">Contraseña incorrecta</small>
+					</div>
+				</div>
 			</div>
 		</div>
 	</main>
