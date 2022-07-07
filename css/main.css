@@ -246,14 +246,15 @@ h3 {
 }
 
 .primary-button:hover {
-  background-color: var(--primary-dark);
-  color: var(--dark);
+  background-color: var(--dark);
+  color: var(--primary);
 }
 
 .primary-button:focus {
   background-color: var(--primary);
   color: var(--dark);
   border-color: 1px solid var(--dark);
+  box-shadow: 0 0 0 0.25rem rgba(20, 20, 43, 0.25);
 }
 
 .btn-circle {
@@ -263,20 +264,20 @@ h3 {
 
 .link-button {
   /* background-color: salmon; */
-  color: var(--a-02);
+  color: var(--info);
   padding: 0.5rem  0;
-  text-decoration: underline;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .link-button:hover {
-  color: var(--a-01);
+  color: var(--info);
   text-decoration: underline;
 }
 
 .link-button:focus {
-  color: var(--a-01);
+  color: var(--info);
   text-decoration: underline;
+  box-shadow: none;
 }
 
 .link-button.disabled {
@@ -352,6 +353,8 @@ h3 {
   color: var(--danger);
   display: none;
 }
+
+
 
 /* LOGIN */
 /* Navbar ----------------------- */
@@ -434,6 +437,18 @@ video {
 .form-group {
  margin-bottom: 1rem;
  text-align: left;
+}
+
+.form-group label {
+  color: var(--gray);
+}
+
+.form-control:focus {
+  color: var(--dark);
+  background-color: var(--white);
+  outline: 0;
+  border-color: 1px solid var(--dark);
+  box-shadow: 0 0 0 0.25rem rgba(20, 20, 43, 0.25);
 }
 
 .field-icon {
