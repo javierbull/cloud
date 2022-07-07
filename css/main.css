@@ -4,7 +4,7 @@
   --dark-light: #4E4B66;
   --gray: #6E7191;
   --gray-medium: #A0A3BD;
-  --gray-ligth: #EFF0F6;
+  --gray-light: #EFF0F6;
   --smoke: #E2E2E2;
   --smoke-light: #EFEFEF;
   --white: #FCFCFC;
@@ -36,6 +36,7 @@ html {
 }
 
 body {
+  background-color: var(--white);
   color: var(--dark);
   font-family: 'Poppins', sans-serif;
   line-height: normal;
@@ -205,140 +206,190 @@ h3 {
   font-weight: 500;
 }
 
-.btn-large {
+.button-large {
   padding: .75rem 3rem;
 }
 
-.btn-block {
+.button-block {
   display: block;
   width: 100%;
 }
 
-.btn-icon {
+.button-icon {
   display: inline-flex;
   align-items: center;
 }
 
-.btn-icon span {
+.button-icon span {
   font-size: 1.2rem
 }
 
-.btn-icon-sidebar {
+.button-icon-sidebar {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.btn-img {
+.button-img {
   display: flex;
   align-items: center;
 }
 
-.btn-img-left img {
+.button-img-left img {
   /* background-color: yellow; */
   display: block;
   height: 2rem;
 }
 
-.primary-button {
+.button-primary {
   background-color: var(--primary);
   color: var(--dark);
 }
 
-.primary-button:hover {
+.button-primary:hover {
   background-color: var(--dark);
   color: var(--primary);
 }
 
-.primary-button:focus {
+.button-primary:focus {
   background-color: var(--primary);
   color: var(--dark);
   border-color: 1px solid var(--dark);
   box-shadow: 0 0 0 0.25rem rgba(20, 20, 43, 0.25);
 }
 
-.btn-circle {
-  border-radius: 100px;
-  padding: .75rem;
-}
-
-.link-button {
+.button-link {
   /* background-color: salmon; */
   color: var(--info);
   padding: 0.5rem  0;
-  font-weight: 500;
 }
 
-.link-button:hover {
+.button-link:hover {
   color: var(--info);
   text-decoration: underline;
 }
 
-.link-button:focus {
-  color: var(--info);
+.button-link:focus {
+  color: var(--info-dark);
   text-decoration: underline;
   box-shadow: none;
 }
 
-.link-button.disabled {
-  color: var(--g-02);
-  text-decoration: underline;
+.button-outline {
+  background-color: none;
+  color: var(--dark);
+  border-color: 1px solid var(--dark);
 }
 
-.link-button-danger {
-  /* background-color: salmon; */
-  color: var(--error);
-  padding: 0.5rem  0;
-  text-decoration: underline;
-  font-weight: 600;
+.button-outline:hover {
+  background-color: var(--dark);
+  color: var(--white);
 }
 
-.link-button-danger:hover {
-  color: var(--error);
-  text-decoration: underline;
+.button-outline:focus {
+  background-color: none;
+  color: var(--dark);
+  border-color: 1px solid var(--dark);
+  box-shadow: 0 0 0 0.25rem rgba(20, 20, 43, 0.25);
 }
 
-.link-button-danger:focus {
-  color: var(--error);
-  text-decoration: underline;
+.button-ghost {
+  background-color: none;
+  color: var(--dark);
 }
 
-.link-button-danger.disabled {
-  color: var(--g-02);
-  text-decoration: underline;
+.button-ghost:hover {
+  background-color: var(--smoke-light);
+  color: var(--dark);
 }
 
-.light-button {
-  color: var(--n-01);
+.button-ghost:focus {
+  background-color: none;
+  color: var(--dark);
+  border-color: 1px solid var(--dark);
+  box-shadow: 0 0 0 0.25rem rgba(20, 20, 43, 0.25);
 }
 
-.light-button:hover {
-  color: var(--n-01);
-  background-color: var(--g-03);
+.button-rounded {
+  background-color: none;
+  color: var(--gray);
+  border-color: 1px solid var(--gray-medium);
+  border-radius: 4rem;
 }
 
-.btn-light:focus, .btn-light.focus {
-  color: var(--n-01);
-  background-color: var(--g-03);
-  border-color: var(--g-03);
-  box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
+.button-rounded:hover {
+  background-color: var(--gray-light);
+  color: var(--gray);
 }
 
-.btn-light.disabled, .btn-light:disabled {
-  background-color: var(--g-02);
-  color: var(--b-01);
-  opacity: 1;
+.button-rounded:focus {
+  background-color: none;
+  color: var(--gray);
+  border-color: 1px solid var(--dark);
+  box-shadow: 0 0 0 0.25rem rgba(20, 20, 43, 0.25);
 }
 
-.btn-outline {
-  border: 1px solid var(--a-02);
-  color: var(--a-02);
+.button-icon {
+  color: var(--dark);
+  background-color: none;
 }
 
-.btn-outline:hover {
-  border: 1px solid var(--a-02);
-  color: var(--a-02);
+.button-icon:hover {
+  color: var(--dark);
+  background-color: var(--gray-light);
 }
+
+.button-icon:focus {
+  color: var(--dark);
+  background-color: none;
+  box-shadow: 0 0 0 0.25rem rgba(20, 20, 43, 0.25);
+}
+
+.button-circle {
+  background-color: var(--primary);
+  border-radius: 100%;
+  min-height: 2.5rem;
+  max-height: 2.5rem;
+  max-width: 2.5rem;
+  min-width: 2.5rem;
+  font-size: 1rem;
+}
+
+.button-circle:hover {
+  background-color: var(--dark);
+  color: var(--white)
+}
+
+.button-circle:focus {
+  background-color: var(--primary);
+  color: var(--dark);
+  border-color: 1px solid var(--dark);
+  box-shadow: 0 0 0 0.25rem rgba(20, 20, 43, 0.25);
+}
+
+.button-textIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-color: 1px solid var(--dark);
+}
+
+.button-textIcon span {
+  margin-right: .5rem;
+}
+
+.button-textIcon:hover {
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+.button-textIcon:focus {
+  background-color: none;
+  color: var(--dark);
+  border-color: 1px solid var(--dark);
+  box-shadow: 0 0 0 0.25rem rgba(20, 20, 43, 0.25);
+}
+
 /* End Buttons */
 
 .show {
@@ -352,6 +403,26 @@ h3 {
 .text-help {
   color: var(--danger);
   display: none;
+}
+
+/*OCULTAR CONTROLES INCREMENTO */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+
+/* FIN OCULTAR CONTROLES INCREMENTO */
+
+.hidden-caret .dropdown-toggle::after {
+  display: none !important;
 }
 
 
@@ -376,11 +447,22 @@ h3 {
   height: 2rem;
 }
 
+.navbar .btn-user {
+  background-color: var(--primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-toggle {
+
+}
+
 /* Fin Navbar */
 
 /* Wrap img login */
 .wrap-img-login {
-  /* background-color: var(--success); */
+  background-color: var(--success);
   min-height: calc(100vh - 64px);
   display: flex;
   justify-content: center;
@@ -441,6 +523,7 @@ video {
 
 .form-group label {
   color: var(--gray);
+  margin-bottom: .25rem;
 }
 
 .form-control:focus {
