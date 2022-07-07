@@ -447,22 +447,24 @@ input[type=number] {
   height: 2rem;
 }
 
-.navbar .btn-user {
+.dropdown-toggle {
   background-color: var(--primary-light);
+  color: var(--dark);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.dropdown-toggle {
-
+.dropdown-toggle span {
+  /* background-color: pink; */
+  margin-left: .5rem;
 }
 
 /* Fin Navbar */
 
 /* Wrap img login */
 .wrap-img-login {
-  background-color: var(--success);
+  background-color: var(--dark);
   min-height: calc(100vh - 64px);
   display: flex;
   justify-content: center;
