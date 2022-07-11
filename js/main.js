@@ -15,6 +15,10 @@ $(document).ready(function(){
 });
 // END SHOW-HIDE PASSWORD
 
-
+// Admin Dashboard  active item sidebar
+$(".sidebar-admin button").click(function(){
+  $(".active").removeClass("active-item-sidebar");
+});
+// Admin Dashboard  active item sidebar
 
 });
