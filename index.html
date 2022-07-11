@@ -24,7 +24,7 @@
 <body>
 
 	<header>
-		<nav class="navbar navbar-expand-lg navbar-light fixed-top container-fluid shadow">
+		<nav class="navbar navbar-light fixed-top container-fluid shadow">
 			<div class="sidebar-menu">
 				<button type="button" name="button" class="btn button-icon" id="toggle-btn-sidebar">
 					<span class="material-icons-outlined">
@@ -42,13 +42,56 @@
 						expand_more
 					</span>
 			  </button>
-			  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+			  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
 			    <li><a class="dropdown-item" href="#">Cambiar contraseña</a></li>
 			    <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
 			  </ul>
 			</div>
 		</nav>
+
 	</header>
+
+	<main class="main-admin">
+		<!-- Sidebar -->
+		<div class="sidebar-admin" id="sidebar-admin">
+			<ul class="sidebar-admin-list">
+				<li class="item-sidebar">
+					<button class="btn btn-toggle collapsed showProfesionales active-item-sidebar active">
+						Profesionales
+					</button>
+				</li>
+				<li class="item-sidebar">
+					<button class="btn btn-toggle collapsed btn-icon-sidebar" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+						Datos
+						<span class="material-icons-outlined">
+							expand_more
+						</span>
+					</button>
+					<div class="collapse show-" id="home-collapse">
+						<ul class="btn-toggle-nav sidebar-list-collapse">
+							<li><a href="#" class="item-collapse rounded showDesignacion">Tipos de designación</a></li>
+							<li><a href="#" class="item-collapse rounded showEspecialidad">Especialidades</a></li>
+							<li><a href="#" class="item-collapse rounded showProfesiones">Profesiones</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="item-sidebar">
+					<button class="btn btn-toggle collapsed showCasos">
+						Casos
+					</button>
+				</li>
+				<li class="item-sidebar">
+					<button class="btn btn-toggle collapsed showUsuarios">
+						Usuarios
+					</button>
+				</li>
+			</ul>
+		</div>
+		<!-- end sidebar -->
+
+	</main>
+
+
 
 
 

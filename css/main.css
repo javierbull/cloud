@@ -44,7 +44,9 @@ body {
 }
 
 main {
-  min-height: calc(100vh - 64px);
+  background-color: pink;
+  min-height: 100vh;
+  padding-top: 64px;
 }
 
 hr {
@@ -215,32 +217,6 @@ h3 {
   width: 100%;
 }
 
-.button-icon {
-  display: inline-flex;
-  align-items: center;
-}
-
-.button-icon span {
-  font-size: 1.2rem
-}
-
-.button-icon-sidebar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.button-img {
-  display: flex;
-  align-items: center;
-}
-
-.button-img-left img {
-  /* background-color: yellow; */
-  display: block;
-  height: 2rem;
-}
-
 .button-primary {
   background-color: var(--primary);
   color: var(--dark);
@@ -332,6 +308,9 @@ h3 {
 .button-icon {
   color: var(--dark);
   background-color: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button-icon:hover {
@@ -367,23 +346,23 @@ h3 {
   box-shadow: 0 0 0 0.25rem rgba(20, 20, 43, 0.25);
 }
 
-.button-textIcon {
+.button-outlined-Icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-color: 1px solid var(--dark);
 }
 
-.button-textIcon span {
+.button-outlined-Icon span {
   margin-right: .5rem;
 }
 
-.button-textIcon:hover {
+.button-outlined-Icon:hover {
   background-color: var(--dark);
   color: var(--white);
 }
 
-.button-textIcon:focus {
+.button-outlined-Icon:focus {
   background-color: none;
   color: var(--dark);
   border-color: 1px solid var(--dark);
@@ -448,7 +427,7 @@ input[type=number] {
 }
 
 .dropdown-toggle {
-  background-color: var(--primary-light);
+  /* background-color: var(--primary-light); */
   color: var(--dark);
   display: flex;
   align-items: center;
@@ -458,6 +437,16 @@ input[type=number] {
 .dropdown-toggle span {
   /* background-color: pink; */
   margin-left: .5rem;
+}
+
+.sidebar-menu {
+  /* background-color: pink; */
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-menu .button-icon {
+  margin-right: .75rem;
 }
 
 /* Fin Navbar */
@@ -550,3 +539,76 @@ video {
 
 /* End Wrap form login */
 /* END LOGIN */
+
+/* ADMIN */
+/* Sidebar */
+.sidebar-admin {
+  background-color: var(--white);
+  width: 250px;
+  min-height: calc(100vh - 64px);
+  position: fixed;
+  left: 0;
+  transition: all 150ms linear;
+}
+
+.sidebar-admin.active {
+  left: -250px;
+}
+
+.sidebar-admin-list .btn {
+  /* background-color: lightgreen; */
+  width: 100%;
+  text-align: left;
+}
+
+.sidebar-admin-list .btn:hover  {
+  background-color: var(--gray-light);
+}
+
+.sidebar-admin-list .btn:focus  {
+  background-color: var(--primary-light);
+  box-shadow: none;
+}
+
+.active-item-sidebar {
+  background-color: var(--primary-light);
+}
+
+.sidebar-admin-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar-list-collapse {
+  background-color: var(--white);
+  list-style: none;
+  padding-left: 0;
+}
+
+.item-collapse {
+  /* background-color: pink; */
+  text-decoration: none;
+  display: block;
+  padding: .75rem .75rem .75rem 2rem;
+  color: var(--dark-light);
+  /* margin-bottom: .5rem; */
+}
+
+.item-collapse:hover {
+  background-color: var(--gray-light);
+  color: var(--dark-light);
+}
+
+.item-collapse:focus {
+  background-color: var(--primary-light);
+}
+
+.btn-icon-sidebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* End Sidebar */
+
+/* END ADMIN */
