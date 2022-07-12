@@ -615,4 +615,30 @@ video {
 
 /* End Sidebar */
 
+/* Main panel admin */
+.admin-panel {
+  background-color: peru;
+  padding: 2rem;
+  min-height: calc(100vh - 64px);
+}
+
+.ml-panel {
+  margin-left: 250px;
+  transition: all 150ms linear;
+}
+
+.ml-panel-0 {
+  margin-left: 0px;
+  transition: all 150ms linear;
+}
+
+.panel {
+  display: none;
+}
+
+.active-panel {
+  display: block;
+}
+/* end main panel admin */
+
 /* END ADMIN */
