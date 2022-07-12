@@ -38,4 +38,8 @@ btnToggle.addEventListener('click', function () {
 
 // End admin btn sidebar togle menu
 
+$(document).ready(function () {
+    $('#example').DataTable();
+});
+
 });
