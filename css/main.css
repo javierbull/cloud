@@ -44,9 +44,8 @@ body {
 }
 
 main {
-  background-color: pink;
+  /* background-color: pink; */
   min-height: 100vh;
-  padding-top: 64px;
 }
 
 hr {
@@ -541,6 +540,11 @@ video {
 /* END LOGIN */
 
 /* ADMIN */
+.main-admin {
+  background-color: lavender;
+  padding-top: 64px;
+}
+
 /* Sidebar */
 .sidebar-admin {
   background-color: var(--white);
