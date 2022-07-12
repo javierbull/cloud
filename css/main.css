@@ -626,7 +626,7 @@ video {
 /* Main panel admin */
 .admin-panel {
   background-color: var(--smoke-light);
-  padding: 2rem;
+  padding: 1rem;
   min-height: calc(100vh - 64px);
 }
 
