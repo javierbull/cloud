@@ -68,4 +68,16 @@ $('.table').DataTable({
 
 // End datatables
 
+// SHOW HIDE panels
+$(".showDashboard").click(function() {
+  $("#dashboard-panel").show();
+  $("#usuarios-panel").hide();
+});
+
+$(".showAdmninistracionUsuarios").click(function() {
+  $("#dashboard-panel").hide();
+  $("#usuarios-panel").show();
+});
+// END SHOW HIDE PANELS
+
 });

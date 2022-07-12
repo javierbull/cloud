@@ -57,34 +57,54 @@
 		<div class="sidebar-admin" id="sidebar-admin">
 			<ul class="sidebar-admin-list">
 				<li class="item-sidebar">
-					<button class="btn btn-toggle collapsed showProfesionales active-item-sidebar active">
-						Profesionales
+					<button class="btn btn-toggle collapsed showDashboard active-item-sidebar- active-">
+						Dashboard
 					</button>
 				</li>
 				<li class="item-sidebar">
-					<button class="btn btn-toggle collapsed btn-icon-sidebar" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
-						Datos
+					<button class="btn btn-toggle collapsed btn-icon-sidebar active-item-sidebar active" data-bs-toggle="collapse" data-bs-target="#admin-collapse" aria-expanded="true">
+						Administración
 						<span class="material-icons-outlined">
 							expand_more
 						</span>
 					</button>
-					<div class="collapse show-" id="home-collapse">
+					<div class="collapse" id="admin-collapse">
 						<ul class="btn-toggle-nav sidebar-list-collapse">
-							<li><a href="#" class="item-collapse rounded showDesignacion">Tipos de designación</a></li>
-							<li><a href="#" class="item-collapse rounded showEspecialidad">Especialidades</a></li>
-							<li><a href="#" class="item-collapse rounded showProfesiones">Profesiones</a></li>
+							<li><a href="#" class="item-collapse rounded showAdmninistracionUsuarios">Usuarios</a></li>
+							<li><a href="#" class="item-collapse rounded showAdministracionEmpresas">Empresas</a></li>
+							<li><a href="#" class="item-collapse rounded showAdministracionSedes">Sedes</a></li>
 						</ul>
 					</div>
 				</li>
 				<li class="item-sidebar">
-					<button class="btn btn-toggle collapsed showCasos">
-						Casos
+					<button class="btn btn-toggle collapsed btn-icon-sidebar" data-bs-toggle="collapse" data-bs-target="#operation-collapse" aria-expanded="true">
+						Operaciones
+						<span class="material-icons-outlined">
+							expand_more
+						</span>
 					</button>
+					<div class="collapse" id="operation-collapse">
+						<ul class="btn-toggle-nav sidebar-list-collapse">
+							<li><a href="#" class="item-collapse rounded showOperacionesCompras">Compras</a></li>
+							<li><a href="#" class="item-collapse rounded showOperacionesVentaVirtual">Venta Virtual</a></li>
+							<li><a href="#" class="item-collapse rounded showOperacionesControlVenta">Control Venta</a></li>
+						</ul>
+					</div>
 				</li>
 				<li class="item-sidebar">
-					<button class="btn btn-toggle collapsed showUsuarios">
-						Usuarios
+					<button class="btn btn-toggle collapsed btn-icon-sidebar" data-bs-toggle="collapse" data-bs-target="#reports-collapse" aria-expanded="true">
+						Reportes
+						<span class="material-icons-outlined">
+							expand_more
+						</span>
 					</button>
+					<div class="collapse show-" id="reports-collapse">
+						<ul class="btn-toggle-nav sidebar-list-collapse">
+							<li><a href="#" class="item-collapse rounded showReporteStockDisponible">Stock Disponible</a></li>
+							<li><a href="#" class="item-collapse rounded showReporteVentaInHouse">Venta In House </a></li>
+							<li><a href="#" class="item-collapse rounded showReporteCierrePromotor">Cierre Promotor</a></li>
+						</ul>
+					</div>
 				</li>
 			</ul>
 		</div>
@@ -92,6 +112,17 @@
 
 		<!-- Main panel -->
 		<div class="admin-panel ml-panel" id="admin-panel">
+			<div class="panel" id="dashboard-panel">
+				<h1>Dashboard panel</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis
+					laborum vitae repellat repudiandae provident fuga numquam.
+					Neque delectus sequi alias.
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum odit cumque et ipsa, suscipit provident quae? Numquam illo, debitis recusandae culpa consectetur consequatur harum nam voluptatibus voluptatum. Maiores nihil, ullam obcaecati sed natus ut deleniti facilis deserunt alias! Repudiandae illo molestiae eveniet, nisi nulla debitis est consectetur architecto eum fugit eligendi incidunt delectus veritatis adipisci mollitia aliquid dolor, perferendis, temporibus impedit porro sit minima deleniti nam officia. Ea, deserunt in ratione nam, provident blanditiis nobis impedit architecto voluptate fugiat possimus, excepturi quasi distinctio error tempora veniam iure eaque delectus hic! Soluta tenetur praesentium nihil aliquam eius cupiditate repudiandae eaque esse.
+				</p>
+			</div>
+
 			<div class="panel active-panel" id="usuarios-panel">
 				<div class="row">
 					<div class="col-lg-12">
