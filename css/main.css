@@ -678,6 +678,10 @@ video {
   font-size: 1.5rem;
   font-weight: 600;
 }
+
+.table thead {
+  border-bottom: 1px solid var(--dark);
+}
 /* End TABLES */
 
 /* END ADMIN */
