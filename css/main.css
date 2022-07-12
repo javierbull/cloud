@@ -541,7 +541,7 @@ video {
 
 /* ADMIN */
 .main-admin {
-  background-color: lavender;
+  background-color: salmon;
   padding-top: 64px;
 }
 
@@ -563,6 +563,7 @@ video {
   /* background-color: lightgreen; */
   width: 100%;
   text-align: left;
+  padding-top: .5rem;
 }
 
 .sidebar-admin-list .btn:hover  {
@@ -593,8 +594,9 @@ video {
   /* background-color: pink; */
   text-decoration: none;
   display: block;
-  padding: .75rem .75rem .75rem 2rem;
+  padding: .5rem .5rem .5rem 2rem;
   color: var(--dark-light);
+  line-height: 1.5rem;
   /* margin-bottom: .5rem; */
 }
 
