@@ -350,6 +350,7 @@ h3 {
 }
 
 .button-outlined-Icon {
+  background-color: var(--white);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -646,5 +647,13 @@ video {
   display: block;
 }
 /* end main panel admin */
+
+.action-btns {
+  background-color: pink;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
 
 /* END ADMIN */
