@@ -255,6 +255,7 @@ h3 {
 }
 
 .button-outline {
+  background-color: var(--white);
   background-color: none;
   color: var(--dark);
   border-color: 1px solid var(--dark);
@@ -657,7 +658,26 @@ video {
 }
 
 /* TABLES */
+.card-dtable {
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: .25rem;
+  box-shadow: 0px 4px 4px rgba(175, 177, 189, 0.25);
+}
 
-/* TABLES */
+.card-dtable-header {
+  /* background-color: lightgreen; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.title-dtable {
+  /* background-color: lavender; */
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+/* End TABLES */
 
 /* END ADMIN */
