@@ -14,7 +14,7 @@
   --danger: #EB0046;
   --danger-dark: #A20F1D;
   --danger-light: #F8D7DA;
-  --info: #057BA6;
+  --info: #1C6DD0;
   --info-dark: #041E49;
   --info-light: #C2E7FF;
   --warning: #FF9033;
@@ -241,6 +241,7 @@ h3 {
   /* background-color: salmon; */
   color: var(--info);
   padding: 0.5rem  0;
+  text-decoration: none;
 }
 
 .button-link:hover {
@@ -803,4 +804,49 @@ div.dataTables_wrapper div.dataTables_info {
   background-color: var(--gray-light);
   color: var(--dark);
 }
-/* EN TAGS */
+/* END TAGS */
+
+/* BREADCRUMB */
+
+.breadcrumb {
+  margin-bottom: 1.5rem;
+}
+/* END BREADCRUMB */
+
+/* CARD */
+
+.card {
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: 0px 4px 4px rgba(175, 177, 189, 0.25);
+}
+
+.card-header {
+  padding: 1rem;
+  background-color: var(--white);
+  border-bottom: none;
+}
+
+.card-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.card-body {
+  background-color: var(--white);
+  padding: 1rem;
+}
+
+.card-footer {
+  background-color: var(--white);
+  border-top: none;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.card-footer .btn {
+  margin-left: .5rem;
+}
+/* END CARD */
