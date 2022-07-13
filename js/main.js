@@ -72,11 +72,19 @@ $('.table').DataTable({
 $(".showDashboard").click(function() {
   $("#dashboard-panel").show();
   $("#usuarios-panel").hide();
+  $("#crearUsuarios-panel").hide();
 });
 
 $(".showAdmninistracionUsuarios").click(function() {
   $("#dashboard-panel").hide();
   $("#usuarios-panel").show();
+  $("#crearUsuarios-panel").hide();
+});
+
+$(".showCrearUsuarios").click(function() {
+  $("#dashboard-panel").hide();
+  $("#usuarios-panel").hide();
+  $("#crearUsuarios-panel").show();
 });
 // END SHOW HIDE PANELS
 
