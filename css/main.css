@@ -684,6 +684,16 @@ video {
   border-bottom: 1px solid var(--dark);
 }
 
+.table .body-table th {
+  /* background-color: pink; */
+  vertical-align: middle;
+}
+
+.table td {
+  /* background-color: yellow; */
+  vertical-align: middle;
+}
+
 /* Pagination color */
 .page-item.active .page-link {
   z-index: 3;
@@ -739,6 +749,8 @@ div.dataTables_wrapper div.dataTables_info {
 }
 
 /*   fin  Pagination     */
+
+
 /* End TABLES */
 
 /* MODALS */
