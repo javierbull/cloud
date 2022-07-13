@@ -328,6 +328,11 @@ h3 {
   box-shadow: 0 0 0 0.25rem rgba(20, 20, 43, 0.25);
 }
 
+.button-icon-sm {
+  /* background-color: salmon; */
+  padding: .25rem;;
+}
+
 .button-circle {
   background-color: var(--primary);
   border-radius: 100%;
@@ -547,7 +552,7 @@ video {
 /* END LOGIN */
 
 .main-admin {
-  background-color: salmon;
+  /* background-color: salmon; */
   padding-top: 64px;
 }
 
@@ -692,6 +697,15 @@ video {
 .table td {
   /* background-color: yellow; */
   vertical-align: middle;
+}
+
+.action-cell {
+  display: flex;
+  align-items: center;
+}
+
+.action-cell .btn {
+  margin-right: .5rem;
 }
 
 /* Pagination color */

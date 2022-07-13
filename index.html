@@ -169,10 +169,15 @@
 						      <td>mbicerra</td>
 						      <td>Mónica Bicerra</td>
 						      <td><span class="tag-status tag-active">Activo</span></td>
-									<td>
-										<button type="button" name="button" class="btn button-icon">
+									<td class="action-cell">
+										<button type="button" name="button" class="btn button-icon button-icon-sm">
 											<span class="material-icons-outlined">
 												edit
+											</span>
+										</button>
+										<button type="button" name="button" class="btn button-icon button-icon-sm" data-bs-toggle="modal" data-bs-target="#modalActivarUsuario">
+											<span class="material-icons-outlined">
+												delete
 											</span>
 										</button>
 									</td>
@@ -182,10 +187,15 @@
 									<td>rarriaga</td>
 									<td>Roberto Arriaga</td>
 									<td><span class="tag-status tag-active">Activo</span></td>
-									<td>
-										<button type="button" name="button" class="btn button-icon">
+									<td class="action-cell">
+										<button type="button" name="button" class="btn button-icon button-icon-sm">
 											<span class="material-icons-outlined">
 												edit
+											</span>
+										</button>
+										<button type="button" name="button" class="btn button-icon button-icon-sm" data-bs-toggle="modal" data-bs-target="#modalActivarUsuario">
+											<span class="material-icons-outlined">
+												delete
 											</span>
 										</button>
 									</td>
@@ -195,10 +205,15 @@
 									<td>nbendezu</td>
 									<td>Natalie Bendezu</td>
 									<td><span class="tag-status tag-active">Activo</span></td>
-									<td>
-										<button type="button" name="button" class="btn button-icon">
+									<td class="action-cell">
+										<button type="button" name="button" class="btn button-icon button-icon-sm">
 											<span class="material-icons-outlined">
 												edit
+											</span>
+										</button>
+										<button type="button" name="button" class="btn button-icon button-icon-sm" data-bs-toggle="modal" data-bs-target="#modalActivarUsuario">
+											<span class="material-icons-outlined">
+												delete
 											</span>
 										</button>
 									</td>
@@ -208,10 +223,15 @@
 									<td>ealiaga</td>
 									<td>Erick Aliaga</td>
 									<td><span class="tag-status tag-inactive">Inactivo</span></td>
-									<td>
-										<button type="button" name="button" class="btn button-icon">
+									<td class="action-cell">
+										<button type="button" name="button" class="btn button-icon button-icon-sm">
 											<span class="material-icons-outlined">
 												edit
+											</span>
+										</button>
+										<button type="button" name="button" class="btn button-icon button-icon-sm" data-bs-toggle="modal" data-bs-target="#modalActivarUsuario">
+											<span class="material-icons-outlined">
+												delete
 											</span>
 										</button>
 									</td>
@@ -221,10 +241,15 @@
 									<td>rnavarro</td>
 									<td>Randy Navarro</td>
 									<td><span class="tag-status tag-inactive">Inctivo</span></td>
-									<td>
-										<button type="button" name="button" class="btn button-icon">
+									<td class="action-cell">
+										<button type="button" name="button" class="btn button-icon button-icon-sm">
 											<span class="material-icons-outlined">
 												edit
+											</span>
+										</button>
+										<button type="button" name="button" class="btn button-icon button-icon-sm" data-bs-toggle="modal" data-bs-target="#modalActivarUsuario">
+											<span class="material-icons-outlined">
+												delete
 											</span>
 										</button>
 									</td>
@@ -279,6 +304,23 @@
 			</div>
 		</div>
 
+		<div class="modal fade" id="modalActivarUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Activar Usuario</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						¿Desea activar el usaurio?
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn button-ghost" data-bs-dismiss="modal">Cerrar</button>
+						<button type="button" class="btn button-primary">Confirmar</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	<!-- Modal -->
 
 	<!-- Fin Modals -->
