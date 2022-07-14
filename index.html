@@ -345,7 +345,9 @@
 									</fieldset>
 									<fieldset class="fieldset-form fieldset-hide" id="fieldset-formNewUserCloud">
 										<form>
-											<button type="button" name="button" class="btn button-outline">Administrar permisos</button>
+											<button type="button" name="button" class="btn button-outline" data-bs-toggle="modal" data-bs-target="#modalPermisosModulosAdminUser">
+												Administrar permisos
+											</button>
 										</form>
 									</fieldset>
 									<fieldset class="fieldset-form fieldset-hide" id="fieldset-formNewUserValidador">
@@ -455,6 +457,62 @@
 							</div>
 
 						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn button-ghost" data-bs-dismiss="modal">Cerrar</button>
+						<button type="button" class="btn button-primary">Guardar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="modalPermisosModulosAdminUser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Administrar Permisos</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<!-- <ul>
+							<li><input id="selectAll" type="checkbox"><label for='selectAll'>Select All</label></li>
+							<li><input id="mce-group[19]-19-0" type="checkbox" name="group[19][8]" value="8" /><label for="mce-group[19]-19-0">Women's</label></li>
+							<li><input id="mce-group[19]-19-1" type="checkbox" name="group[19][16]" value="16" /><label for="mce-group[19]-19-1">Men's</label></li>
+							<li><input id="mce-group[19]-19-2" type="checkbox" name="group[19][32]" value="32" /><label for="mce-group[19]-19-2">Kid's</label></li>
+							<li><input id="mce-group[19]-19-3" type="checkbox" name="group[19][64]" value="64" /><label for="mce-group[19]-19-3">Athletic</label></li>
+							<li><input id="mce-group[19]-19-4" type="checkbox" name="group[19][128]" value="128" /><label for="mce-group[19]-19-4">Outdoor</label></li>
+							<li><input id="mce-group[19]-19-5" type="checkbox" name="group[19][256]" value="256" /><label for="mce-group[19]-19-5">Dress Shoes</label></li>
+							<li><input id="mce-group[19]-19-6" type="checkbox" name="group[19][512]" value="512" /><label for="mce-group[19]-19-6">Casual</label></li>
+							<li><input id="mce-group[19]-19-7" type="checkbox" name="group[19][1024]" value="1024" /><label for="mce-group[19]-19-7">Flip Flops</label></li>
+						</ul> -->
+
+						<ul>
+							<div class="form-check">
+								<input class="form-check-input selectAllCheckboxes" type="checkbox" value="" id="selectAll">
+								<label class="form-check-label" for="selectAll">
+									Select All
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input selectAllCheckboxes" type="checkbox" value="" id="checkOption1" checked>
+								<label class="form-check-label" for="checkOption1">
+									Option 1
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input selectAllCheckboxes" type="checkbox" value="" id="checkOption2" checked>
+								<label class="form-check-label" for="checkOption2">
+									Option 2
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input selectAllCheckboxes" type="checkbox" value="" id="checkOption3" checked>
+								<label class="form-check-label" for="checkOption3">
+									Option 3
+								</label>
+							</div>
+						</ul>
+						</div>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn button-ghost" data-bs-dismiss="modal">Cerrar</button>

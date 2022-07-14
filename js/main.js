@@ -116,4 +116,16 @@ $("#checkUserValidador").click(function () {
 });
 // END SHOW FORMS CERAR USUARIO
 
+// SELECT ALL CHECKBOXES
+$("#selectAll").click(function() {
+  $(".selectAllCheckboxes").prop("checked", $(this).prop("checked"));
+});
+
+$(".selectAllCheckboxes").click(function() {
+  if (!$(this).prop("checked")) {
+    $("#selectAll").prop("checked", false);
+  }
+});
+// END SELECT ALL CHECKBOXES
+
 });
