@@ -98,6 +98,22 @@ $('#radioTypeUserAdmin').click(function(){
   $("#fieldset-userInhouse").hide();
   $("#fieldset-userAdmin").show();
 });
+
+$("#checkUserCloud").click(function () {
+    if ($(this).is(":checked")) {
+        $("#fieldset-formNewUserCloud").show();
+    } else {
+        $("#fieldset-formNewUserCloud").hide();
+    }
+});
+
+$("#checkUserValidador").click(function () {
+    if ($(this).is(":checked")) {
+        $("#fieldset-formNewUserValidador").show();
+    } else {
+        $("#fieldset-formNewUserValidador").hide();
+    }
+});
 // END SHOW FORMS CERAR USUARIO
 
 });
