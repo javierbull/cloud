@@ -88,4 +88,16 @@ $(".showCrearUsuarios").click(function() {
 });
 // END SHOW HIDE PANELS
 
+// SHOW FORMS CERAR Usuario
+$('#radioTypeUserInhouse').click(function(){
+  $("#fieldset-userInhouse").show();
+  $("#fieldset-userAdmin").hide();
+});
+
+$('#radioTypeUserAdmin').click(function(){
+  $("#fieldset-userInhouse").hide();
+  $("#fieldset-userAdmin").show();
+});
+// END SHOW FORMS CERAR USUARIO
+
 });
