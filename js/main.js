@@ -92,6 +92,8 @@ $(".showCrearUsuarios").click(function() {
 $('#radioTypeUserInhouse').click(function(){
   $("#fieldset-userInhouse").show();
   $("#fieldset-userAdmin").hide();
+  $("#fieldset-formNewUserCloud").hide();
+  $("#fieldset-formNewUserValidador").hide();
 });
 
 $('#radioTypeUserAdmin').click(function(){
