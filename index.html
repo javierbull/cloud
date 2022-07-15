@@ -474,44 +474,72 @@
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
-						<!-- <ul>
-							<li><input id="selectAll" type="checkbox"><label for='selectAll'>Select All</label></li>
-							<li><input id="mce-group[19]-19-0" type="checkbox" name="group[19][8]" value="8" /><label for="mce-group[19]-19-0">Women's</label></li>
-							<li><input id="mce-group[19]-19-1" type="checkbox" name="group[19][16]" value="16" /><label for="mce-group[19]-19-1">Men's</label></li>
-							<li><input id="mce-group[19]-19-2" type="checkbox" name="group[19][32]" value="32" /><label for="mce-group[19]-19-2">Kid's</label></li>
-							<li><input id="mce-group[19]-19-3" type="checkbox" name="group[19][64]" value="64" /><label for="mce-group[19]-19-3">Athletic</label></li>
-							<li><input id="mce-group[19]-19-4" type="checkbox" name="group[19][128]" value="128" /><label for="mce-group[19]-19-4">Outdoor</label></li>
-							<li><input id="mce-group[19]-19-5" type="checkbox" name="group[19][256]" value="256" /><label for="mce-group[19]-19-5">Dress Shoes</label></li>
-							<li><input id="mce-group[19]-19-6" type="checkbox" name="group[19][512]" value="512" /><label for="mce-group[19]-19-6">Casual</label></li>
-							<li><input id="mce-group[19]-19-7" type="checkbox" name="group[19][1024]" value="1024" /><label for="mce-group[19]-19-7">Flip Flops</label></li>
-						</ul> -->
-
-						<ul>
-							<div class="form-check">
-								<input class="form-check-input selectAllCheckboxes" type="checkbox" value="" id="selectAll">
-								<label class="form-check-label" for="selectAll">
-									Select All
-								</label>
-							</div>
-							<div class="form-check">
-								<input class="form-check-input selectAllCheckboxes" type="checkbox" value="" id="checkOption1" checked>
-								<label class="form-check-label" for="checkOption1">
-									Option 1
-								</label>
-							</div>
-							<div class="form-check">
-								<input class="form-check-input selectAllCheckboxes" type="checkbox" value="" id="checkOption2" checked>
-								<label class="form-check-label" for="checkOption2">
-									Option 2
-								</label>
-							</div>
-							<div class="form-check">
-								<input class="form-check-input selectAllCheckboxes" type="checkbox" value="" id="checkOption3" checked>
-								<label class="form-check-label" for="checkOption3">
-									Option 3
-								</label>
-							</div>
-						</ul>
+						<div class="accordion accordion-checkbox" id="accordionExample">
+						  <div class="accordion-item">
+						    <div class="accordion-header" id="headingOne">
+									<div class="form-check">
+										<input class="form-check-input selectAllCheckboxes" type="checkbox" value="" id="selectAll" checked>
+									</div>
+						      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+										Administración
+						      </button>
+						    </div>
+						    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+						      <div class="accordion-body">
+										<ul>
+											<!-- <div class="form-check">
+												<input class="form-check-input selectAllCheckboxes" type="checkbox" value="" id="selectAll" checked>
+												<label class="form-check-label" for="selectAll">
+													Select All
+												</label>
+											</div> -->
+											<div class="form-check">
+												<input class="form-check-input selectAllCheckboxes" type="checkbox" value="" id="checkOption1" checked>
+												<label class="form-check-label" for="checkOption1">
+													Option 1
+												</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input selectAllCheckboxes" type="checkbox" value="" id="checkOption2" checked>
+												<label class="form-check-label" for="checkOption2">
+													Option 2
+												</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input selectAllCheckboxes" type="checkbox" value="" id="checkOption3" checked>
+												<label class="form-check-label" for="checkOption3">
+													Option 3
+												</label>
+											</div>
+										</ul>
+						      </div>
+						    </div>
+						  </div>
+						  <div class="accordion-item">
+						    <h2 class="accordion-header" id="headingTwo">
+						      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						        Accordion Item #2
+						      </button>
+						    </h2>
+						    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+						      <div class="accordion-body">
+						        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+						      </div>
+						    </div>
+						  </div>
+						  <div class="accordion-item">
+						    <h2 class="accordion-header" id="headingThree">
+						      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						        Accordion Item #3
+						      </button>
+						    </h2>
+						    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+						      <div class="accordion-body">
+						        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+						      </div>
+						    </div>
+						  </div>
+						</div>
 						</div>
 					</div>
 					<div class="modal-footer">

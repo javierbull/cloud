@@ -128,4 +128,6 @@ $(".selectAllCheckboxes").click(function() {
 });
 // END SELECT ALL CHECKBOXES
 
+// CHECKBOX ACCORDION
+
 });

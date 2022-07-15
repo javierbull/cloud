@@ -865,5 +865,35 @@ div.dataTables_wrapper div.dataTables_info {
   /* background-color: pink; */
   margin-left: 2rem;
   margin-bottom: 1rem;
+
 }
 /* END FORM CREAR USUARIO */
+
+/* ACCORDION CHECKBOX */
+.accordion-checkbox .accordion-header {
+  /* background-color: pink; */
+  display: flex;
+  align-items: center;
+}
+
+.accordion-checkbox .accordion-header .form-check {
+  /* background-color: lavender; */
+  padding: 1rem 1.25rem;
+  margin-bottom: 0;
+  height: 57px;
+  width: 57px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordion-checkbox .accordion-header .form-check .form-check-input {
+  float: none;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.form-check .form-check-input, .form-check .form-check-label  {
+  cursor: pointer;
+}
+/* ACCORDION CHECKBOX */
