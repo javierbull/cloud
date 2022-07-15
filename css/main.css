@@ -197,7 +197,11 @@ h3 {
 
 /* Colors */
 .primary-color {
-  var(--primary);
+  color: var(--primary);
+}
+
+.success-color {
+  color: var(--success);
 }
 /* End Colors */
 

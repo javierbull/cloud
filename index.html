@@ -360,7 +360,7 @@
 							</div>
 							<div class="card-footer">
 								<button type="button" name="button" class="btn button-ghost showAdmninistracionUsuarios">Cerrar</button>
-								<button type="button" name="button" class="btn button-primary">Guardar</button>
+								<button type="button" name="button" class="btn button-primary" data-bs-toggle="modal" data-bs-target="#modalSuccess">Guardar</button>
 							</div>
 						</div>
 					</div>
@@ -677,6 +677,28 @@
 					<div class="modal-footer">
 						<button type="button" class="btn button-ghost" data-bs-dismiss="modal">Cerrar</button>
 						<button type="button" class="btn button-primary">Guardar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="modalSuccess" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Datos Guardados</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p class="d-flex align-items-center">
+							<span class="material-icons success-color marginRight-1">
+								done
+							</span>
+							Los datos se guardaron de manera exitosa
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn button-primary showAdmninistracionUsuarios" data-bs-dismiss="modal">Aceptar</button>
 					</div>
 				</div>
 			</div>
