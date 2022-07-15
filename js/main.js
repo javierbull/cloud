@@ -146,6 +146,16 @@ $(".selectAllCheckboxesReportes").click(function() {
     $("#selectAllModulosReportes").prop("checked", false);
   }
 });
+
+$("#selectAllModulosInhouse").click(function() {
+  $(".selectAllCheckboxesInhouse").prop("checked", $(this).prop("checked"));
+});
+
+$(".selectAllCheckboxesInhouse").click(function() {
+  if (!$(this).prop("checked")) {
+    $("#selectAllModulosInhouse").prop("checked", false);
+  }
+});
 // END SELECT ALL CHECKBOXES
 
 // CHECKBOX ACCORDION

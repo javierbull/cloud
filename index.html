@@ -309,7 +309,7 @@
 												<label for="inputSerieUserInhouseNew" class="form-label">Serie documento</label>
 												<input type="text" class="form-control" id="inputSerieUserInhouseNew" placeholder="Número de serie">
 											</div>
-											<button type="button" name="button" class="btn button-outline">Administrar permisos</button>
+											<button type="button" name="button" class="btn button-outline" data-bs-toggle="modal" data-bs-target="#modalPermisosModulosInhouseUser">Administrar permisos</button>
 										</form>
 									</fieldset>
 									<fieldset class="fieldset-form fieldset-hide" id="fieldset-userAdmin">
@@ -630,6 +630,48 @@
 						  		</div>
 						  	</div>
 						  </div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn button-ghost" data-bs-dismiss="modal">Cerrar</button>
+						<button type="button" class="btn button-primary">Guardar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="modalPermisosModulosInhouseUser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Administrar Permisos</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="accordion accordion-checkbox" id="accordionPermisosModulosInhouse">
+							<div class="accordion-item">
+								<div class="accordion-header" id="headingOne">
+									<div class="form-check">
+										<input class="form-check-input selectAllCheckboxesInhouse" type="checkbox" value="" id="selectAllModulosInhouse" checked>
+										<label class="form-check-label" for="selectAllModulosInhouse">
+											Reportes
+										</label>
+									</div>
+									<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOnePermisosModulosInhouse" aria-expanded="true" aria-controls="collapseOnePermisosModulos"></button>
+								</div>
+								<div id="collapseOnePermisosModulosInhouse" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionPermisosModulosInhouse">
+									<div class="accordion-body">
+										<ul class="mb-0">
+											<div class="form-check">
+												<input class="form-check-input selectAllCheckboxesInhouse" type="checkbox" value="" id="checkVentaModuleOption1" checked>
+												<label class="form-check-label" for="checkVentaModuleOption1">
+													Venta
+												</label>
+											</div>
+										</ul>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="modal-footer">
