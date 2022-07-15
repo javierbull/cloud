@@ -117,13 +117,13 @@ $("#checkUserValidador").click(function () {
 // END SHOW FORMS CERAR USUARIO
 
 // SELECT ALL CHECKBOXES
-$("#selectAll").click(function() {
-  $(".selectAllCheckboxes").prop("checked", $(this).prop("checked"));
+$("#selectAllModulosAdministracion").click(function() {
+  $(".selectAllCheckboxesAdministracion").prop("checked", $(this).prop("checked"));
 });
 
-$(".selectAllCheckboxes").click(function() {
+$(".selectAllCheckboxesAdministracion").click(function() {
   if (!$(this).prop("checked")) {
-    $("#selectAll").prop("checked", false);
+    $("#selectAllModulosAdministracion").prop("checked", false);
   }
 });
 // END SELECT ALL CHECKBOXES
