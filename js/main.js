@@ -126,6 +126,26 @@ $(".selectAllCheckboxesAdministracion").click(function() {
     $("#selectAllModulosAdministracion").prop("checked", false);
   }
 });
+
+$("#selectAllModulosOperaciones").click(function() {
+  $(".selectAllCheckboxesOperaciones").prop("checked", $(this).prop("checked"));
+});
+
+$(".selectAllCheckboxesOperaciones").click(function() {
+  if (!$(this).prop("checked")) {
+    $("#selectAllModulosOperaciones").prop("checked", false);
+  }
+});
+
+$("#selectAllModulosReportes").click(function() {
+  $(".selectAllCheckboxesReportes").prop("checked", $(this).prop("checked"));
+});
+
+$(".selectAllCheckboxesReportes").click(function() {
+  if (!$(this).prop("checked")) {
+    $("#selectAllModulosReportes").prop("checked", false);
+  }
+});
 // END SELECT ALL CHECKBOXES
 
 // CHECKBOX ACCORDION
