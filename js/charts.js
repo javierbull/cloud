@@ -352,47 +352,6 @@ $(function() {
     });
   }
 
-  // REPORTES
-  if ($("#barChartReporteVenta").length) {
-    var barChartCanvas = $("#barChartReporteVenta").get(0).getContext("2d");
-    // This will get the first returned node in the jQuery collection.
-    var barChart = new Chart(barChartCanvas, {
-      type: 'bar',
-      data: data,
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero: true
-            }
-          }]
-        }
-      }
-    });
-  }
-
-  if ($("#barChartReporteContable").length) {
-    var barChartCanvas = $("#barChartReporteContable").get(0).getContext("2d");
-    // This will get the first returned node in the jQuery collection.
-    var barChart = new Chart(barChartCanvas, {
-      type: 'bar',
-      data: data,
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero: true
-            }
-          }]
-        }
-      }
-    });
-  }
-
   if ($("#barChartReporteColaborador").length) {
     var barChartCanvas = $("#barChartReporteColaborador").get(0).getContext("2d");
     // This will get the first returned node in the jQuery collection.
@@ -412,27 +371,29 @@ $(function() {
       }
     });
   }
-  // FIN REPORTES
 
-  // OPERACIONES
-  if ($("#barChartCompras").length) {
-    var barChartCanvas = $("#barChartCompras").get(0).getContext("2d");
+  if ($("#barChartExample").length) {
+    var barChartCanvas = $("#barChartExample").get(0).getContext("2d");
     // This will get the first returned node in the jQuery collection.
     var barChart = new Chart(barChartCanvas, {
       type: 'bar',
       data: data,
       options: {
         responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero: true
-            }
-          }]
-        }
       }
     });
   }
-  // FIN OPERACIONES
+
+  if ($("#pieChartExample").length) {
+    var pieChartCanvas = $("#pieChartExample").get(0).getContext("2d");
+    var pieChart = new Chart(pieChartCanvas, {
+      type: 'pie',
+      data: doughnutPieData,
+      options: {
+        // responsive: true,
+        maintainAspectRatio: false,
+      }
+    });
+  }
+
 });
