@@ -624,6 +624,7 @@ video {
 
 .item-collapse:focus {
   background-color: var(--primary-light);
+  color: var(--dark);
 }
 
 .btn-icon-sidebar {
