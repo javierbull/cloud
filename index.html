@@ -113,14 +113,21 @@
 		<!-- Main panel -->
 		<div class="admin-panel ml-panel" id="admin-panel">
 			<div class="panel active-panel" id="dashboard-panel">
-				<h1>Dashboard panel</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis
-					laborum vitae repellat repudiandae provident fuga numquam.
-					Neque delectus sequi alias.
-				</p>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum odit cumque et ipsa, suscipit provident quae? Numquam illo, debitis recusandae culpa consectetur consequatur harum nam voluptatibus voluptatum. Maiores nihil, ullam obcaecati sed natus ut deleniti facilis deserunt alias! Repudiandae illo molestiae eveniet, nisi nulla debitis est consectetur architecto eum fugit eligendi incidunt delectus veritatis adipisci mollitia aliquid dolor, perferendis, temporibus impedit porro sit minima deleniti nam officia. Ea, deserunt in ratione nam, provident blanditiis nobis impedit architecto voluptate fugiat possimus, excepturi quasi distinctio error tempora veniam iure eaque delectus hic! Soluta tenetur praesentium nihil aliquam eius cupiditate repudiandae eaque esse.
-				</p>
+				<div class="header-panel">
+					<h1>Dashboard</h1>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="card">
+							<div class="card-body">
+								<h4 class="card-title">Line chart</h4>
+								<canvas id="lineChart"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
 
 			<div class="panel" id="usuarios-panel">
@@ -711,8 +718,10 @@
 	<script src="js/bootstrap/jquery.3.2.1.min.js"></script>
 	<script src="js/plugin/datatables/datatables.min.js"></script>
 	<script src="js/bootstrap/bootstrap.bundle.min.js"></script>
-	<script src="js/main.js"></script>
+	<script src="js/plugin/chart.js/chart.min.js"></script>
 	<script src="js/charts.js"></script>
+	<script src="js/main.js"></script>
+
 
 </body>
 
